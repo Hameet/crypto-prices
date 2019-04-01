@@ -1,14 +1,24 @@
 import React from 'react'
 
-const Display = props => {
-  console.log(props, 'props')
+const Display = ({ prices }) => {
+  const { ABC, BTC, AION } = prices
+  if (prices == undefined) {
+    return 'Nothing'
+  }
+  
   return (
-    <div onLoad={props.getCurrency}>
+    <div>
       {
         <p>
           {' '}
           Bitcoin:
-          <span> {props.currency}</span>
+          <span> {BTC}</span>
+          <span> AION: {AION}</span>
+          <span>
+            {' '}
+            ABC:
+            {ABC}
+          </span>
         </p>
       }
     </div>

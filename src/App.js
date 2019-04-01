@@ -1,48 +1,64 @@
 import React, { useState, useEffect } from 'react'
-import Display from './Components/Display'
+import { connect } from 'react-redux'
+
+import Display from './containers/Display'
 import Form from './Components/Form'
 
-const API_KEY = `89bcb9d40a3fd6b18613ef79499b757e`
+// import { fetchPrices } from './state/actions'
 
-function useFetch (url, defaultResponse) {
-  const [data, setData] = useState(defaultResponse)
-  async function getDataFromAPI (url) {
-    try {
-      const res = await fetch(url)
-      const data = await res.json()
-      setData({
-        isLoading: false,
-        data
-      })
-    } catch (e) {
-      console.error(e)
-    }
-  }
+import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
-  useEffect(
-    () => {
-      getDataFromAPI(url)
-    },
-    [url]
-  )
-  return data
-}
-
-export default function App () {
-  const apiEndpoint = `http://api.coinlayer.com/api/live?access_key=${API_KEY}`
-  const userFetchResponse = useFetch(apiEndpoint, {
-    isLoading: true,
-    data: null
-  })
-  if (!userFetchResponse.data || userFetchResponse.isLoading) {
-    return 'Loading...'
-  }
-  const { ABC, BTC } = userFetchResponse.data.rates
-  console.log('log', userFetchResponse.data.rates)
+function App ({ getData }) {
+  console.log('getData', getData())
   return (
     <div>
       {' '}
-      Coin: {ABC} {BTC}
+      {getData()}
+      <Display />
     </div>
   )
 }
+
+const API_KEY = `89bcb9d40a3fd6b18613ef79499b757e`
+const apiEndpoint = `http://api.coinlayer.com/api/live?access_key=${API_KEY}`
+
+// const getData = async e => {
+//   e.preventDefault()
+//   const api_call = await fetch(apiEndpoint)
+//   const data = await api_call.json()
+//   console.log('data', data)
+// }
+
+// function mapDispatchToProps (dispatch) {
+//   fetchData: event => dispatch(todoAdded(event.currentTarget.value))
+// }
+
+function mapDispatchToProps (dispatch) {
+  // console.log(items)
+  return {
+    getData: () => {
+      dispatch(itemsIsLoading(true))
+      fetch(apiEndpoint)
+        .then(response => {
+          if (!response.ok) {
+            throw Error(response.statusText)
+          }
+
+          dispatch(itemsIsLoading(false))
+
+          return response
+        })
+        .then(response => response.json())
+        .then(function (items) {
+          // console.log('app', items, 'items.rates', items.rates)
+          return dispatch(fetchPrices(items.rates))
+        })
+        .catch(() => dispatch(itemsHasErrored(true)))
+    }
+  }
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(App)
