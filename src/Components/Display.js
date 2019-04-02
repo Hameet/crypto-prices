@@ -16,22 +16,31 @@ const StyledCurrency = styled.div`
 const StyledPrices = styled.div`
   flex: 1;
 `
+const StyledRowOne = styled.p`
+  color: red;
+`
+const StyledRowTwo = styled.p`
+  color: orange;
+`
+const StyledRowThree = styled.p`
+  color: green;
+`
 
 const Display = () => {
   return (
     <StyledContainer>
       <StyledBox>
         <StyledCurrency>
-          <p>Bitcoin: </p>
-          <p>AION: </p>
-          <p>ABC: </p>
+          <StyledRowOne>Bitcoin: </StyledRowOne>
+          <StyledRowTwo>AION: </StyledRowTwo>
+          <StyledRowThree>ABC: </StyledRowThree>
         </StyledCurrency>
       </StyledBox>
       <StyledBox>
         <StyledPrices>
-          <p>100</p>
-          <p>200</p>
-          <p>300</p>
+          <StyledRowOne>100</StyledRowOne>
+          <StyledRowTwo>200</StyledRowTwo>
+          <StyledRowThree>300</StyledRowThree>
         </StyledPrices>
       </StyledBox>
     </StyledContainer>
