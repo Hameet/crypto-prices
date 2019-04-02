@@ -11,19 +11,22 @@ const StyledBox = styled.div`
   text-align: center;
 `
 const StyledCurrency = styled.div`
-  flex: 1;
+  padding: 5em;
 `
 const StyledPrices = styled.div`
-  flex: 1;
+  padding: 5em;
 `
 const StyledRowOne = styled.p`
   color: red;
+  font-size: 2em;
 `
 const StyledRowTwo = styled.p`
   color: orange;
+  font-size: 2em;
 `
 const StyledRowThree = styled.p`
   color: green;
+  font-size: 2em;
 `
 
 const Display = () => {
