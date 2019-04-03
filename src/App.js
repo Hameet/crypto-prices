@@ -4,12 +4,9 @@ import { connect } from 'react-redux'
 import Display from './containers/Display'
 import Form from './Components/Form'
 
-// import { fetchPrices } from './state/actions'
-
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
 function App ({ getData }) {
-  console.log('getData', getData())
   return (
     <div>
       {' '}
@@ -20,38 +17,30 @@ function App ({ getData }) {
 }
 
 const API_KEY = `89bcb9d40a3fd6b18613ef79499b757e`
-const apiEndpoint = `http://api.coinlayer.com/api/live?access_key=${API_KEY}`
-
-// const getData = async e => {
-//   e.preventDefault()
-//   const api_call = await fetch(apiEndpoint)
-//   const data = await api_call.json()
-//   console.log('data', data)
-// }
-
-// function mapDispatchToProps (dispatch) {
-//   fetchData: event => dispatch(todoAdded(event.currentTarget.value))
-// }
+const key = `32d6e33b-dd31-4055-8bdb-7868f888d116`
+// const apiEndpoint = `http://api.coinlayer.com/api/live?access_key=${API_KEY}`
+const apiUrl = `https://api.alternative.me/v1/ticker/`
+const proxyurl = 'https://cors-anywhere.herokuapp.com/'
 
 function mapDispatchToProps (dispatch) {
-  // console.log(items)
   return {
     getData: () => {
       dispatch(itemsIsLoading(true))
-      fetch(apiEndpoint)
+      fetch(proxyurl + apiUrl)
         .then(response => {
           if (!response.ok) {
             throw Error(response.statusText)
           }
-
           dispatch(itemsIsLoading(false))
-
           return response
         })
-        .then(response => response.json())
+        .then(function (response) {
+          // console.log('jason', response.json())
+          return response.json()
+        })
         .then(function (items) {
-          // console.log('app', items, 'items.rates', items.rates)
-          return dispatch(fetchPrices(items.rates))
+          console.log('app', items)
+          return dispatch(fetchPrices(items))
         })
         .catch(() => dispatch(itemsHasErrored(true)))
     }

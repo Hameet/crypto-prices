@@ -2,12 +2,12 @@ import { createStore, applyMiddleware } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
-import combineReducers from '../reducer'
+import { rootReducer } from '../reducer'
 
-function configureStore (initialState) {
+function configureStore () {
   return createStore(
-    combineReducers,
-    initialState
+    rootReducer
+    // initialState
     // devToolsEnhancer(),
     // applyMiddleware(thunk)
   )

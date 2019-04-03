@@ -3,10 +3,10 @@ export const ITEMS_HAS_ERRORED = 'ITEMS_HAS_ERRORED'
 export const ITEMS_IS_LOADING = 'ITEMS_IS_LOADING'
 export const ITEMS_FETCH_DATA_SUCCESS = 'ITEMS_FETCH_DATA_SUCCESS'
 
-export function fetchPrices (prices) {
+export function fetchPrices (rates) {
   return {
     type: ITEMS_FETCH_DATA_SUCCESS,
-    payload: prices
+    payload: rates
   }
 }
 

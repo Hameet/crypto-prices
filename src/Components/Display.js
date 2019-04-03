@@ -1,24 +1,16 @@
 import React from 'react'
 
-const Display = ({ prices }) => {
-  const { ABC, BTC, AION } = prices
+const Display = ({ prices, names }) => {
+  console.log('inDisplaycontainer', prices)
   if (prices == undefined) {
     return 'Nothing'
   }
-  
+  const [Bitcoin, Ethereum, Ripple] = names
   return (
     <div>
       {
         <p>
-          {' '}
-          Bitcoin:
-          <span> {BTC}</span>
-          <span> AION: {AION}</span>
-          <span>
-            {' '}
-            ABC:
-            {ABC}
-          </span>
+          <span>{Bitcoin}</span>, {Ethereum},{Ripple}
         </p>
       }
     </div>
