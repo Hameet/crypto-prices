@@ -1,21 +1,25 @@
-import { map } from 'ramda'
+import { map, keys, values } from 'ramda'
 
-// // export function getSelectedRestaurant ({ items }) {
-// //     return items.selectedRestaurant
-// //   }
+import { createSelector } from 'reselect'
 
-// const getPrices = ({ rates }) => rates
+// This function uses ramda's map to extract the crypto names and prices and then combines them into one single object
+const getNamesAndPrices = map(function (x) {
+  var name = x.name
+  var price = x.price_usd
+  var obj = { [name]: price }
+  return obj
+})
 
-// // const getCurrencies = ({ ABC }, { BTC }) => {
-// //   ABC, BTC
-// // }
+// These two functions use the reselect library's createSelector to create a memoized function to which we will later on pass the state i.e in the container. The reslecet selector function caches the results for a certain input, which in our case is the state.
 
-// function getCurrencies ({ rates }) {
-//   const { ABC, BTC } = rates
-//   return ABC && BTC
-// }
+const FilteredKeys = createSelector(
+  getNamesAndPrices,
+  map(keys)
+)
 
-const getPrices = map(item => item.price_usd)
-const getNames = map(item => item.name)
+const FilteredValues = createSelector(
+  getNamesAndPrices,
+  map(values)
+)
 
-export { getNames, getPrices }
+export { getNamesAndPrices, FilteredKeys, FilteredValues }

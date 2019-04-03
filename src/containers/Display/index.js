@@ -2,16 +2,19 @@ import { connect } from 'react-redux'
 
 import Display from '../../Components/Display'
 
-import { getPrices, getNames } from '../../state/selectors'
-// import Restaurant from '../../components/Restaurant'
+import {
+  FilteredKeys,
+  FilteredValues,
+  getNamesAndPrices
+} from '../../state/selectors'
 
 const mapStateToProps = state => {
   if (state == undefined) {
-    return 'Nope'
+    return {}
   }
-  const prices = getPrices(state.rates)
-  const names = getNames(state.rates)
-  console.log('names', state)
+  const prices = FilteredValues(state.rates)
+  const names = getNamesAndPrices(state.rates)
+  console.log('prices', names)
   return {
     prices,
     names
