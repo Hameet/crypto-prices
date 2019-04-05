@@ -14,7 +14,7 @@ const Display = ({ names }) => {
     'Loading...............................'
   ) : (
     <ul>
-      {map(function (x) {
+      {map(x => {
         return <Li>{keys(x) + ' :' + values(x)}</Li>
       }, names)}
     </ul>
