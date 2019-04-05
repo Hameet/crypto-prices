@@ -3,18 +3,18 @@ import { connect } from 'react-redux'
 import Display from '../../Components/Display'
 
 import {
-  FilteredKeys,
+  // FilteredKeys,
   FilteredValues,
   getNamesAndPrices
 } from '../../state/selectors'
 
 const mapStateToProps = state => {
-  if (state == undefined) {
+  if (state === undefined) {
     return {}
   }
   const prices = FilteredValues(state.rates)
   const names = getNamesAndPrices(state.rates)
-  console.log('prices', names)
+  // console.log('prices', )
   return {
     prices,
     names
