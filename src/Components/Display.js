@@ -21,21 +21,4 @@ const Display = ({ names }) => {
   )
 }
 
-//  function Todolist ({ todos, handleOnDelete, index }) {
-//   console.log('todos')
-//   return isNilOrEmpty(todos) ? null : (
-//     <ul>
-//       {indexedMap(
-//         (todo, idx) => (
-//           <Li key={idx} data-index={idx}>
-//             {todo}
-//             <Button onClick={handleOnDelete.bind(index)}>&nbsp;Del</Button>
-//           </Li>
-//         ),
-//         todos
-//       )}
-//     </ul>
-//   )
-// }
-
 export default Display
