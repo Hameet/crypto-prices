@@ -20,13 +20,10 @@ const mapStateToProps = state => {
   //   return {}
   // }
   const active = map(function (x) {
-    return parseFloat(x)
+    return parseFloat(x) < 0 ? true : null
   })
   const fnn = x => (x < 0 ? true : null)
-  const lolz = pipe(
-    active,
-    fnn
-  )
+
   const Vol = getVol(state)
   const Names = getNames(state)
   const Prices_1h = getPriceChange1h(state)
@@ -38,7 +35,7 @@ const mapStateToProps = state => {
   const MarketCap = getMarketCap(state)
   // const reactive = active(Prices_1h)
 
-  console.log('Selectors', lolz(Prices_1h))
+  console.log('Selectors', active(Prices_1h))
   return {
     Names,
     Prices_1h,

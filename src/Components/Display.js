@@ -9,10 +9,8 @@ const Li = styled.li`
   list-style: none;
   color: ${function (reactive) {
     console.log('reactive', reactive)
-    const lul = reactive.children < 0
-    return lul ? 'palevioletred' : 'green'
+    return reactive.children < 0 ? 'palevioletred' : 'green'
   }};
-  //color: red;
 `
 
 const Display = ({ Prices_1h }) => {
