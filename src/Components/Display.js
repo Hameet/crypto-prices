@@ -7,16 +7,24 @@ const Li = styled.li`
   padding: 0 1em;
   align-content: center;
   list-style: none;
+  color: ${function (reactive) {
+    console.log('reactive', reactive)
+    const lul = reactive.children < 0
+    return lul ? 'palevioletred' : 'green'
+  }};
+  //color: red;
 `
 
-const Display = ({ names }) => {
-  return isNil(names) ? (
-    'Loading...............................'
-  ) : (
+const Display = ({ Prices_1h }) => {
+  // return isNil(Names) ? (
+  //   'Loading...............................'
+  // ) :
+  console.log('reactive')
+  return (
     <ul>
       {map(x => {
-        return <Li>{keys(x) + ' :' + values(x)}</Li>
-      }, names)}
+        return <Li>{x}</Li>
+      }, Prices_1h)}
     </ul>
   )
 }
