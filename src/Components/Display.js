@@ -22,7 +22,7 @@ const Display = ({ rates }) => {
         const MarketCap = cap
           ? RoundOffVol(cap).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
           : null
-        console.log('type', x.market_cap_usd)
+        // console.log('num', num, 'volume24', Volume24h)
         return (
           <StyledTable>
             <StyledBubble>{x.percent_change_1h + '%'}</StyledBubble>
