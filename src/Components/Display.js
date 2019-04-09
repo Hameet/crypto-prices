@@ -1,7 +1,7 @@
 import React from 'react'
 import { map } from 'ramda'
 
-import { Table, Price1h, Name, Vol24h } from './styled'
+import { StyledTable, StyledBubble, StyledName, StyledText } from './styled'
 
 import { RoundOffPrice, RoundOffVol } from '../utilities'
 
@@ -24,13 +24,14 @@ const Display = ({ rates }) => {
           : null
         // console.log('num', num, 'volume24', Volume24h)
         return (
-          <Table>
-            <Price1h>{x.percent_change_1h + '%'}</Price1h>
-            <Name>{x.name}</Name>
-            <Vol24h>{'$' + UsdPrice}</Vol24h>
-            <Vol24h>{'$' + Volume24h}</Vol24h>
-            <Vol24h>{'$' + MarketCap}</Vol24h>
-          </Table>
+          <StyledTable>
+            <StyledBubble>{x.percent_change_1h + '%'}</StyledBubble>
+
+            <StyledName>{x.name}</StyledName>
+            <StyledText>{'$' + UsdPrice}</StyledText>
+            <StyledText>{'$' + Volume24h}</StyledText>
+            <StyledText>{'$' + MarketCap}</StyledText>
+          </StyledTable>
         )
       }, rates)}
     </>
