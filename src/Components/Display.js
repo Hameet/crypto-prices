@@ -22,11 +22,10 @@ const Display = ({ rates }) => {
         const MarketCap = cap
           ? RoundOffVol(cap).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
           : null
-        console.log('type', x.market_cap_usd)
+        // console.log('num', num, 'volume24', Volume24h)
         return (
           <Table>
             <Price1h>{x.percent_change_1h + '%'}</Price1h>
-
             <Name>{x.name}</Name>
             <Vol24h>{'$' + UsdPrice}</Vol24h>
             <Vol24h>{'$' + Volume24h}</Vol24h>
