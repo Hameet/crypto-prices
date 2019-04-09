@@ -36,7 +36,7 @@ const mapStateToProps = state => {
   const MarketCap = getMarketCap(state)
   // const reactive = active(Prices_1h)
 
-  console.log('Selectors', active(Prices_1h))
+  // console.log('Selectors', PriceUsd)
   return {
     Names,
     Prices_1h,
