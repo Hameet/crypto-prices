@@ -52,6 +52,7 @@ const getPricesBtc = createSelector(
 )
 
 export {
+  getRates,
   getVol,
   getPriceChange1h,
   getPriceChange24h,

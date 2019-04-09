@@ -4,6 +4,7 @@ import { map, pipe } from 'ramda'
 import Display from '../../Components/Display'
 
 import {
+  getRates,
   getVol,
   getPriceChange1h,
   getPriceChange24h,
@@ -39,7 +40,8 @@ const mapStateToProps = state => {
   return {
     Names,
     Prices_1h,
-    reactive: active(Prices_1h)
+    reactive: active(Prices_1h),
+    rates: getRates(state)
   }
 }
 

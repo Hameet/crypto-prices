@@ -7,13 +7,24 @@ const Li = styled.li`
   padding: 0 1em;
   align-content: center;
   list-style: none;
-  color: ${function (reactive) {
+`
+const Price1h = styled.div`
+  border-radius: 15px;
+
+  color: white;
+  width: 30px;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: ${function (reactive) {
     console.log('reactive', reactive)
-    return reactive.children < 0 ? 'palevioletred' : 'green'
+    return reactive.children < 0 ? 'red' : 'green'
   }};
 `
 
-const Display = ({ Prices_1h }) => {
+const Display = ({ rates }) => {
   // return isNil(Names) ? (
   //   'Loading...............................'
   // ) :
@@ -21,8 +32,16 @@ const Display = ({ Prices_1h }) => {
   return (
     <ul>
       {map(x => {
-        return <Li>{x}</Li>
-      }, Prices_1h)}
+        return (
+          <div>
+            <Li>
+              <Price1h>{x.percent_change_1h}</Price1h>
+            </Li>
+            {/* <Li>{x.name}</Li> */}
+            {/* <Li>{x['24h_volume_usd']}</Li> */}
+          </div>
+        )
+      }, rates)}
     </ul>
   )
 }
