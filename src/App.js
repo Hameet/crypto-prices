@@ -5,11 +5,14 @@ import Display from './containers/Display'
 
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
+import { StyledHeader } from './Components/Header'
+
 function App ({ getData }) {
   return (
     <div>
       {' '}
       {getData()}
+      <StyledHeader />
       <Display />
     </div>
   )

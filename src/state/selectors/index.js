@@ -6,6 +6,8 @@ import { createSelector } from 'reselect'
 
 const getRates = ({ rates }) => rates
 
+const isPositive = factor => factor < 0
+
 const getNames = createSelector(
   getRates,
   map(x => x.name)
@@ -51,6 +53,11 @@ const getPricesBtc = createSelector(
   map(x => x.price_btc)
 )
 
+const getPriceVariation = createSelector(
+  getRates,
+  map(x => x.percent_change_1h < 0)
+)
+
 export {
   getRates,
   getVol,
@@ -61,5 +68,6 @@ export {
   getPricesBtc,
   getPricesUsd,
   getAvailableSupply,
-  getMarketCap
+  getMarketCap,
+  getPriceVariation
 }

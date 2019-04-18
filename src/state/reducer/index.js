@@ -1,7 +1,7 @@
 import { ITEMS_FETCH_DATA_SUCCESS } from '../actions'
 import { defaultState } from '../defaultState'
 
-function rootReducer (state = defaultState, { type, payload }) {
+export default function rootReducer (state = defaultState, { type, payload }) {
   switch (type) {
     case ITEMS_FETCH_DATA_SUCCESS:
       return {
@@ -12,5 +12,3 @@ function rootReducer (state = defaultState, { type, payload }) {
       return state
   }
 }
-
-export { rootReducer }
