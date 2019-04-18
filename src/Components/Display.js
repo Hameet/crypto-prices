@@ -8,7 +8,8 @@ import {
   StyledName,
   StyledText,
   columns,
-  components
+  components,
+  Titles
 } from './styled'
 
 import { RoundOffPrice, RoundOffVol } from '../utilities'
@@ -27,7 +28,7 @@ const Display = ({ rates, Prices_1h }) => {
   console.log('DisplayComp', Prices_1h)
   return (
     <>
-      <Table columns={columns} data={data} />
+      <Table columns={Titles} data={data} />
       {map(x => {
         const NewStyle = Wrapper(StyledBubble)
         const factor = x.percent_change_1h
