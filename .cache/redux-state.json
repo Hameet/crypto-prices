@@ -935,12 +935,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-04-18T03:21:01.723Z",
+      "buildTime": "2019-04-18T03:30:09.316Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "f70b3bc5c1b7e24e6a3cdc764485305b",
+        "contentDigest": "611fa1a4bcfe0ac92f7f7008371cbf7a",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1252,8 +1252,8 @@
   "componentDataDependencies": {
     "nodes": {
       "Site": [
-        "sq--src-gatsbycomponents-layout-js",
-        "sq--src-gatsbycomponents-seo-js"
+        "sq--src-gatsbycomponents-seo-js",
+        "sq--src-gatsbycomponents-layout-js"
       ],
       "1f671196-df5b-5d49-9aa1-a139438be754": [
         "sq--src-gatsbycomponents-image-js"

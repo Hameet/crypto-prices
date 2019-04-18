@@ -21,11 +21,11 @@ import Wrapper from './wrappers'
 const isPositive = factor => factor < 0
 const data = ['']
 
-const Display = ({ rates, Prices_1h }) => {
+const Display = ({ rates, variation }) => {
   // return isNil(Names) ? (
   //   'Loading...............................'
   // ) :
-  console.log('DisplayComp', Prices_1h)
+  console.log('DisplayComp', variation)
   return (
     <>
       <Table columns={Titles} data={data} components={components} />
@@ -51,7 +51,11 @@ const Display = ({ rates, Prices_1h }) => {
             b: <StyledText>{'$' + UsdPrice}</StyledText>,
             c: <StyledText>{'$' + Volume24h}</StyledText>,
             d: <StyledText>{'$' + MarketCap}</StyledText>,
-            e: <StyledBubble>{x.percent_change_1h + '%'}</StyledBubble>
+            e: (
+              <StyledBubble variation={variation}>
+                {x.percent_change_1h + '%'}
+              </StyledBubble>
+            )
           }
         ]
 

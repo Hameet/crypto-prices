@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { render } from 'react-dom'
-import React from 'react'
+import { map, forEach } from 'ramda'
 
 const StyledTable = styled.div`
   display: flex;
@@ -54,13 +53,6 @@ const components = {
   header: { cell: Bodytitle }
 }
 
-// const components = {
-//   body: {
-//     row: BodyRow,
-//     cell: Bodytext
-//   }
-// }
-
 const StyledBubble = styled.div`
   border-radius: 15px;
   content-align: center;
@@ -71,16 +63,17 @@ const StyledBubble = styled.div`
   margin: 10px;
   font-weight: bold;
   font-size: 15px;
-  background-color: ${function ({ reactive }) {
-    // console.log('props', reactive)
-    return reactive ? 'red' : 'green'
-  }};
-  // {function ({ reactive }) {
-  //   console.log('props', reactive)
-  //   const str = props.children
+  background-color: ${function ({ variation }) {
+    var result
+    for (var i = 0; i < variation.length; i++) {
+      console.log('result', variation[i])
+      if (variation[i] == false) {
+        return 'red'
+      } else return 'green'
+    }
 
-  //   return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
-  // }};
+    // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
+  }};
 `
 const StyledName = styled.p`
   font-family: Arial, Helvetica, sans-serif

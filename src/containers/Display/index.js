@@ -17,7 +17,7 @@ import {
   getPriceVariation
 } from '../../state/selectors'
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = state => {
   // if (state === undefined) {
   //   return {}
   // }
@@ -47,14 +47,13 @@ const mapStateToProps = (state, ownProps) => {
 
   const ite = x => console.log(x)
   forEach(ite, value)
-  // console.log('Selectors', getPriceVariation(state))
+  console.log('Selectors', getPriceVariation(state))
   return {
     Names,
     Prices_1h,
     reactive: forEach(ite, value),
     variation: getPriceVariation(state),
-    rates: getRates(state),
-    whate: ownProps
+    rates: getRates(state)
   }
 }
 
