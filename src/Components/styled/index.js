@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import React from 'react'
+import { render } from 'react-dom'
 
 const StyledTable = styled.div`
   display: flex;
@@ -16,21 +18,12 @@ const columns = [
     title: 'Coin',
     dataIndex: 'a',
     key: 1,
-    width: 200,
-    style: `${red}`
+    width: 200
   },
   { id: '123', title: 'Price', dataIndex: 'b', key: 'b', width: 200 },
   { title: 'MarketCap', dataIndex: 'c', key: 'c', width: 200 },
   { title: 'Volume24h', dataIndex: 'd', key: 'd', width: 200 },
   { title: 'PriceChange', dataIndex: 'e', key: 'e', width: 200 }
-  // {
-  //   title: 'Operations',
-  //   dataIndex: '',
-  //   key: 'd',
-  //   render () {
-  //     return <a href='#'>Operations</a>
-  //   }
-  // }
 ]
 
 const BodyRow = styled.tr`

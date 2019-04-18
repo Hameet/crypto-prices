@@ -49,7 +49,8 @@ const Display = ({ rates, Prices_1h }) => {
             key: 1,
             b: '$' + UsdPrice,
             c: '$' + Volume24h,
-            d: '$' + MarketCap
+            d: '$' + MarketCap,
+            e: <StyledBubble>{x.percent_change_1h + '%'}</StyledBubble>
           }
         ]
 
