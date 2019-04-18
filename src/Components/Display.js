@@ -28,7 +28,7 @@ const Display = ({ rates, Prices_1h }) => {
   console.log('DisplayComp', Prices_1h)
   return (
     <>
-      <Table columns={Titles} data={data} />
+      <Table columns={Titles} data={data} components={components} />
       {map(x => {
         const NewStyle = Wrapper(StyledBubble)
         const factor = x.percent_change_1h
@@ -46,17 +46,17 @@ const Display = ({ rates, Prices_1h }) => {
 
         const dat = [
           {
-            a: x.name,
+            a: <StyledName>{x.name}</StyledName>,
             key: 1,
-            b: '$' + UsdPrice,
-            c: '$' + Volume24h,
-            d: '$' + MarketCap,
+            b: <StyledText>{'$' + UsdPrice}</StyledText>,
+            c: <StyledText>{'$' + Volume24h}</StyledText>,
+            d: <StyledText>{'$' + MarketCap}</StyledText>,
             e: <StyledBubble>{x.percent_change_1h + '%'}</StyledBubble>
           }
         ]
 
         return (
-          <Table columns={columns} components={components} data={dat} />
+          <Table columns={columns} data={dat} components={components} />
           /* <NewStyle>{x.percent_change_1h + '%'}</NewStyle>
             <StyledName>{x.name}</StyledName>
             <StyledText>{'$' + UsdPrice}</StyledText>

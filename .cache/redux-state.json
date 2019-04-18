@@ -935,12 +935,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-04-18T02:36:26.969Z",
+      "buildTime": "2019-04-18T03:21:01.723Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "cec1cef1b499c2d006103cc8f6be464c",
+        "contentDigest": "f70b3bc5c1b7e24e6a3cdc764485305b",
         "type": "Site",
         "owner": "internal-data-bridge"
       }

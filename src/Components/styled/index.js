@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { render } from 'react-dom'
+import React from 'react'
 
 const StyledTable = styled.div`
   display: flex;
@@ -40,19 +42,24 @@ const BodyRow = styled.tr`
 `
 const Bodytext = styled.td`
   text-align: center;
+  color: blue;
 `
 const Bodytitle = styled.th`
-  content: 'whatever';
-
   color: red;
+  font-weight: bold;
+  font-size: 30px;
 `
 const components = {
-  body: {
-    header: Bodytitle,
-    row: BodyRow,
-    cell: Bodytext
-  }
+  body: { cell: Bodytext, row: BodyRow },
+  header: { cell: Bodytitle }
 }
+
+// const components = {
+//   body: {
+//     row: BodyRow,
+//     cell: Bodytext
+//   }
+// }
 
 const StyledBubble = styled.div`
   border-radius: 15px;
