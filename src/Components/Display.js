@@ -52,7 +52,7 @@ const Display = ({ rates, variation }) => {
             c: <StyledText>{'$' + Volume24h}</StyledText>,
             d: <StyledText>{'$' + MarketCap}</StyledText>,
             e: (
-              <StyledBubble variation={variation}>
+              <StyledBubble varied={varied}>
                 {x.percent_change_1h + '%'}
               </StyledBubble>
             )

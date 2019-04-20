@@ -63,17 +63,8 @@ const StyledBubble = styled.div`
   margin: 10px;
   font-weight: bold;
   font-size: 15px;
-  background-color: ${function ({ variation }) {
-    var result
-    for (var i = 0; i < variation.length; i++) {
-      console.log('result', variation[i])
-      if (variation[i] == false) {
-        return 'red'
-      } else return 'green'
-    }
-
-    // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
-  }};
+  background-color: ${({ varied }) => (varied ? 'red' : 'green')}};
+  // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
 `
 const StyledName = styled.p`
   font-family: Arial, Helvetica, sans-serif
