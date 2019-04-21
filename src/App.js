@@ -14,9 +14,9 @@ function App ({ getData }) {
       {' '}
       {getData()}
       <StyledHeader />
-      <table>
+    
         <Display />
-      </table>
+      
     </div>
   )
 }

@@ -11,7 +11,10 @@ import {
   columns,
   components,
   Titles,
-  Bodytitle
+  BodyRow,
+  Bodytitle,
+  StyledBody,
+  StyledHead
 } from './styled'
 
 import { RoundOffPrice, RoundOffVol } from '../utilities'
@@ -31,78 +34,59 @@ const Display = ({ rates, variation }) => {
   // ) :
   // console.log('key', code)
   return (
-    <>
-      {/* <Table columns={Titles} data={data} components={components} /> */}
+    <StyledTable>
+      <StyledHead>
+        <BodyRow>
+          <Bodytitle>Coin</Bodytitle>
+          <Bodytitle>Coin</Bodytitle>
+        </BodyRow>
+      </StyledHead>
 
-      {map((x, index) => {
-        const NewStyle = Wrapper(StyledBubble)
-        const factor = x.percent_change_1h
-        const varied = isPositive(x.percent_change_1h)
-        const num = x['24h_volume_usd']
-        const UsdPrice = RoundOffPrice(x.price_usd)
-        const Volume24h = num
-          ? RoundOffVol(num).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-          : null
-        const cap = x.market_cap_usd
-        const MarketCap = cap
-          ? RoundOffVol(cap).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-          : null
-        console.log('percent change')
+      <StyledBody>
+        {map(x => {
+          const NewStyle = Wrapper(StyledBubble)
+          const factor = x.percent_change_1h
+          const varied = isPositive(x.percent_change_1h)
+          const num = x['24h_volume_usd']
+          const UsdPrice = RoundOffPrice(x.price_usd)
+          const Volume24h = num
+            ? RoundOffVol(num).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+            : null
+          const cap = x.market_cap_usd
+          const MarketCap = cap
+            ? RoundOffVol(cap).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+            : null
+          console.log('percent change')
 
-        const dat = [
-          {
-            a: <StyledName key={uid(x)}>{x.name}</StyledName>,
-
-            b: <StyledText>{'$' + UsdPrice}</StyledText>,
-            c: <StyledText>{'$' + Volume24h}</StyledText>,
-            d: (
+          return (
+            <BodyRow key={uid(x)}>
+              <StyledName>{x.name}</StyledName>{' '}
+              <StyledText>{'$' + UsdPrice}</StyledText>
+              <StyledText>{'$' + Volume24h}</StyledText>
               <StyledBubble varied={varied}>
                 {x.percent_change_1h + '%'}
               </StyledBubble>
-            ),
-            e: (
               <StyledBubble varied={varied}>
                 {x.percent_change_24h + '%'}
               </StyledBubble>
-            ),
-            f: (
               <StyledBubble varied={varied}>
                 {x.percent_change_7d + '%'}
               </StyledBubble>
-            ),
-            g: <StyledText>{'$' + MarketCap}</StyledText>,
-            h: <StyledText>{x.available_supply}</StyledText>
-          }
-        ]
-
-        return (
-          // <Table
-          //   columns={columns}
-          //   key={uid(x)}
-          //   data={dat}
-          //   components={components}
-          // />
-          <StyledTable key={uid(x)}>
-            <StyledName>{x.name}</StyledName>
-
-            <StyledText>{'$' + UsdPrice}</StyledText>
-            <StyledText>{'$' + Volume24h}</StyledText>
-            <StyledBubble varied={varied}>
-              {x.percent_change_1h + '%'}
-            </StyledBubble>
-            <StyledBubble varied={varied}>
-              {x.percent_change_24h + '%'}
-            </StyledBubble>
-            <StyledBubble varied={varied}>
-              {x.percent_change_7d + '%'}
-            </StyledBubble>
-            <StyledText>{'$' + MarketCap}</StyledText>
-            <StyledText>{x.available_supply}</StyledText>
-          </StyledTable>
-        )
-      }, rates)}
-    </>
+              <StyledText>{'$' + MarketCap}</StyledText>
+              <StyledText>{x.available_supply}</StyledText>
+            </BodyRow>
+          )
+        }, rates)}
+      </StyledBody>
+    </StyledTable>
   )
 }
 
 export default Display
+
+// <Table
+//   columns={columns}
+//   key={uid(x)}
+//   data={dat}
+//   components={components}
+// />

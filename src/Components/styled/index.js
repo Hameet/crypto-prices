@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 import { map, forEach } from 'ramda'
 
-const StyledTable = styled.div`
+const StyledTable = styled.table`
   display: flex;
   justify-content: center;
   justify-content: space-between
-  border: 2px solid red;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  style="overflow-x:auto";
 `
 const red = styled.p`
   color: red;
@@ -54,31 +58,55 @@ const Bodytitle = styled.th`
   color: red;
   font-weight: bold;
   font-size: 30px;
+  color: #4a4a4a;
+  background: #fff;
+
+  // font-weight: 700;
+  // padding-left: 5px;
+  // padding-right: 5px;
+  // text-align: left;
+  // vertical-align: middle;
+  // white-space: nowrap;
+  // overflow: hidden;
+  // line-height: 0;
+  padding-top: -50px;
 `
 const components = {
   body: { cell: Bodytext, row: BodyRow },
   header: { cell: Bodytitle }
 }
 
-const StyledBubble = styled.div`
+const StyledHead = styled.thead`
+  margin-top: -25px;
+ 
+}
+`
+const StyledBody = styled.tbody`
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+`
+
+const StyledBubble = styled.td`
   border-radius: 15px;
   content-align: center;
   color: white;
   width: 35px;
   border: 1px solid red;
-  padding: 10px;
+
   margin: 10px;
   font-weight: bold;
   font-size: 15px;
   background-color: ${({ varied }) => (varied ? 'red' : 'green')}};
   // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
 `
-const StyledName = styled.p`
+const StyledName = styled.td`
   font-family: Arial, Helvetica, sans-serif
   font-weight: bold;
   font-size: 30px;
 `
-const StyledText = styled.p`
+const StyledText = styled.td`
   font-family: Arial, Helvetica, sans-serif
   font-weight: bold;
   font-size: 20px;
@@ -88,8 +116,11 @@ export {
   StyledBubble,
   StyledName,
   StyledText,
+  StyledBody,
+  StyledHead,
   columns,
   components,
   Titles,
+  BodyRow,
   Bodytitle
 }
