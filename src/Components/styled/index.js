@@ -18,18 +18,25 @@ const columns = [
     key: 1,
     width: 200
   },
-  { id: '123', dataIndex: 'b', key: 'b', width: 200 },
+  { dataIndex: 'b', key: 2, width: 200 },
   { dataIndex: 'c', key: 'c', width: 200 },
   { dataIndex: 'd', key: 'd', width: 200 },
-  { dataIndex: 'e', key: 'e', width: 200 }
+  { dataIndex: 'e', key: 'e', width: 200 },
+  { dataIndex: 'f', key: 'f', width: 200 },
+  { dataIndex: 'g', key: 'g', width: 200 },
+  { dataIndex: 'h', key: 'h', width: 200 }
 ]
 
 const Titles = [
   { title: 'Coin', width: 200 },
   { title: 'Price', width: 200 },
-  { title: 'MarketCap', width: 200 },
+
   { title: 'Volume24h', width: 200 },
-  { title: 'PriceChange', width: 200 }
+  { title: 'PriceChange-1h', width: 200 },
+  { title: 'PriceChange-24h', width: 200 },
+  { title: 'PriceChange-7d', width: 200 },
+  { title: 'MarketCap', width: 200 },
+  { title: 'Available-Supply', width: 200 }
 ]
 
 const BodyRow = styled.tr`

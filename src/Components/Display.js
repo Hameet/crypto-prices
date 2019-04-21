@@ -1,6 +1,7 @@
 import React from 'react'
 import { map } from 'ramda'
 import Table from 'rc-table'
+import { uid } from 'react-uid'
 
 import {
   StyledTable,
@@ -25,11 +26,11 @@ const Display = ({ rates, variation }) => {
   // return isNil(Names) ? (
   //   'Loading...............................'
   // ) :
-  console.log('DisplayComp', variation)
+  // console.log('key', code)
   return (
     <>
       <Table columns={Titles} data={data} components={components} />
-      {map(x => {
+      {map((x, index) => {
         const NewStyle = Wrapper(StyledBubble)
         const factor = x.percent_change_1h
         const varied = isPositive(x.percent_change_1h)
@@ -47,20 +48,36 @@ const Display = ({ rates, variation }) => {
         const dat = [
           {
             a: <StyledName>{x.name}</StyledName>,
-            key: 1,
+
             b: <StyledText>{'$' + UsdPrice}</StyledText>,
             c: <StyledText>{'$' + Volume24h}</StyledText>,
-            d: <StyledText>{'$' + MarketCap}</StyledText>,
-            e: (
+            d: (
               <StyledBubble varied={varied}>
                 {x.percent_change_1h + '%'}
               </StyledBubble>
-            )
+            ),
+            e: (
+              <StyledBubble varied={varied}>
+                {x.percent_change_24h + '%'}
+              </StyledBubble>
+            ),
+            f: (
+              <StyledBubble varied={varied}>
+                {x.percent_change_7d + '%'}
+              </StyledBubble>
+            ),
+            g: <StyledText>{'$' + MarketCap}</StyledText>,
+            h: <StyledText>{x.available_supply}</StyledText>
           }
         ]
 
         return (
-          <Table columns={columns} data={dat} components={components} />
+          <Table
+            columns={columns}
+            key={uid(x)}
+            data={dat}
+            components={components}
+          />
           /* <NewStyle>{x.percent_change_1h + '%'}</NewStyle>
             <StyledName>{x.name}</StyledName>
             <StyledText>{'$' + UsdPrice}</StyledText>
