@@ -6,6 +6,7 @@ import Display from './containers/Display'
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
 import { StyledHeader } from './Components/Header'
+import { Bodytitle } from './Components/styled'
 
 function App ({ getData }) {
   return (
@@ -13,7 +14,9 @@ function App ({ getData }) {
       {' '}
       {getData()}
       <StyledHeader />
-      <Display />
+      <table>
+        <Display />
+      </table>
     </div>
   )
 }

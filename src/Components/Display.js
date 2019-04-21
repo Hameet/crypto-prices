@@ -1,5 +1,5 @@
 import React from 'react'
-import { map } from 'ramda'
+import { map, uniq } from 'ramda'
 import Table from 'rc-table'
 import { uid } from 'react-uid'
 
@@ -10,7 +10,8 @@ import {
   StyledText,
   columns,
   components,
-  Titles
+  Titles,
+  Bodytitle
 } from './styled'
 
 import { RoundOffPrice, RoundOffVol } from '../utilities'
@@ -32,6 +33,7 @@ const Display = ({ rates, variation }) => {
   return (
     <>
       {/* <Table columns={Titles} data={data} components={components} /> */}
+
       {map((x, index) => {
         const NewStyle = Wrapper(StyledBubble)
         const factor = x.percent_change_1h
@@ -81,13 +83,21 @@ const Display = ({ rates, variation }) => {
           //   components={components}
           // />
           <StyledTable key={uid(x)}>
+            <StyledName>{x.name}</StyledName>
+
+            <StyledText>{'$' + UsdPrice}</StyledText>
+            <StyledText>{'$' + Volume24h}</StyledText>
             <StyledBubble varied={varied}>
               {x.percent_change_1h + '%'}
             </StyledBubble>
-            <StyledName>{x.name}</StyledName>
-            <StyledText>{'$' + UsdPrice}</StyledText>
-            <StyledText>{'$' + Volume24h}</StyledText>
+            <StyledBubble varied={varied}>
+              {x.percent_change_24h + '%'}
+            </StyledBubble>
+            <StyledBubble varied={varied}>
+              {x.percent_change_7d + '%'}
+            </StyledBubble>
             <StyledText>{'$' + MarketCap}</StyledText>
+            <StyledText>{x.available_supply}</StyledText>
           </StyledTable>
         )
       }, rates)}

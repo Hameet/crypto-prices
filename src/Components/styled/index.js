@@ -90,5 +90,6 @@ export {
   StyledText,
   columns,
   components,
-  Titles
+  Titles,
+  Bodytitle
 }

@@ -771,10 +771,6 @@
             "version": "^0.26.1"
           },
           {
-            "name": "rc-table",
-            "version": "^6.4.4"
-          },
-          {
             "name": "react",
             "version": "^16.8.6"
           },
@@ -787,16 +783,8 @@
             "version": "^5.2.0"
           },
           {
-            "name": "react-key-index",
-            "version": "^0.1.1"
-          },
-          {
             "name": "react-redux",
             "version": "^7.0.2"
-          },
-          {
-            "name": "react-uid",
-            "version": "^2.2.0"
           },
           {
             "name": "redux-devtools-extension",
@@ -943,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-04-21T04:08:34.061Z",
+      "buildTime": "2019-04-21T04:25:05.834Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "03956303a820f1c8810dd6ecbec2ce3a",
+        "contentDigest": "a229c32da9eece3c4f55e1c9eb7a3c4c",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1101,16 +1089,6 @@
       "ctime": "2019-04-18T02:24:40.714Z",
       "birthtime": "2019-04-18T02:24:40.714Z"
     },
-    "34466678-c835-5211-b9e3-51c6107eefb4": {
-      "id": "34466678-c835-5211-b9e3-51c6107eefb4",
-      "children": [],
-      "parent": "97015446-c629-510b-9681-f791c072d1c2",
-      "internal": {
-        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
-        "type": "ImageSharp",
-        "owner": "gatsby-transformer-sharp"
-      }
-    },
     "1f671196-df5b-5d49-9aa1-a139438be754": {
       "id": "1f671196-df5b-5d49-9aa1-a139438be754",
       "children": [
@@ -1157,6 +1135,16 @@
       "mtime": "2019-04-14T06:54:05.485Z",
       "ctime": "2019-04-18T02:24:40.714Z",
       "birthtime": "2019-04-18T02:24:40.714Z"
+    },
+    "34466678-c835-5211-b9e3-51c6107eefb4": {
+      "id": "34466678-c835-5211-b9e3-51c6107eefb4",
+      "children": [],
+      "parent": "97015446-c629-510b-9681-f791c072d1c2",
+      "internal": {
+        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
+      }
     },
     "b5ccd4ab-557c-5d9a-bb92-4b201e78ed76": {
       "id": "b5ccd4ab-557c-5d9a-bb92-4b201e78ed76",
@@ -1255,13 +1243,13 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "1fb52bbed591b1379cfa62510621d2e9"
+    "PLUGINS_HASH": "47e634ca868d4eebc174568bef5d1450"
   },
   "componentDataDependencies": {
     "nodes": {
       "Site": [
-        "sq--src-gatsbycomponents-seo-js",
-        "sq--src-gatsbycomponents-layout-js"
+        "sq--src-gatsbycomponents-layout-js",
+        "sq--src-gatsbycomponents-seo-js"
       ],
       "1f671196-df5b-5d49-9aa1-a139438be754": [
         "sq--src-gatsbycomponents-image-js"
