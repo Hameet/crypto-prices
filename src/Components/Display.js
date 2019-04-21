@@ -20,7 +20,9 @@ import getPriceVariation from '../state/selectors'
 import Wrapper from './wrappers'
 
 const isPositive = factor => factor < 0
-const data = ['']
+const data = [
+  { a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', key: 1 }
+]
 
 const Display = ({ rates, variation }) => {
   // return isNil(Names) ? (
@@ -29,7 +31,7 @@ const Display = ({ rates, variation }) => {
   // console.log('key', code)
   return (
     <>
-      <Table columns={Titles} data={data} components={components} />
+      {/* <Table columns={Titles} data={data} components={components} /> */}
       {map((x, index) => {
         const NewStyle = Wrapper(StyledBubble)
         const factor = x.percent_change_1h
@@ -47,7 +49,7 @@ const Display = ({ rates, variation }) => {
 
         const dat = [
           {
-            a: <StyledName>{x.name}</StyledName>,
+            a: <StyledName key={uid(x)}>{x.name}</StyledName>,
 
             b: <StyledText>{'$' + UsdPrice}</StyledText>,
             c: <StyledText>{'$' + Volume24h}</StyledText>,
@@ -72,17 +74,21 @@ const Display = ({ rates, variation }) => {
         ]
 
         return (
-          <Table
-            columns={columns}
-            key={uid(x)}
-            data={dat}
-            components={components}
-          />
-          /* <NewStyle>{x.percent_change_1h + '%'}</NewStyle>
+          // <Table
+          //   columns={columns}
+          //   key={uid(x)}
+          //   data={dat}
+          //   components={components}
+          // />
+          <StyledTable key={uid(x)}>
+            <StyledBubble varied={varied}>
+              {x.percent_change_1h + '%'}
+            </StyledBubble>
             <StyledName>{x.name}</StyledName>
             <StyledText>{'$' + UsdPrice}</StyledText>
             <StyledText>{'$' + Volume24h}</StyledText>
-            <StyledText>{'$' + MarketCap}</StyledText> */
+            <StyledText>{'$' + MarketCap}</StyledText>
+          </StyledTable>
         )
       }, rates)}
     </>
