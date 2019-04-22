@@ -7,7 +7,7 @@ const StyledTable = styled.table`
   justify-content: space-between
   border-collapse: collapse;  
   width: 100%;
-  border: 1px solid #ddd;
+  
   style="overflow-x:auto";
   border-spacing: 10px;
   // table-layout: fixed ;
@@ -27,18 +27,18 @@ const Bodytitle = styled.th`
   color: red;
   font-weight: bold;
   font-size: 30px;
-  color: #4a4a4a;
-  background: #fff;
 
-  // font-weight: 700;
-  // padding-left: 5px;
-  // padding-right: 5px;
-  // text-align: left;
-  // vertical-align: middle;
-  // white-space: nowrap;
-  // overflow: hidden;
-  // line-height: 0;
+  background: #fff;
   padding-top: -50px;
+`
+
+const CoinTitle = styled.th`
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+  background: #fff;
+  padding-top: -50px;
+  align-content: right;
 `
 const components = {
   body: { cell: Bodytext, row: BodyRow },
@@ -54,7 +54,6 @@ const StyledBody = styled.tbody`
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
 `
 
 const StyledColumn = styled.colgroup`
@@ -69,7 +68,7 @@ const StyledName = styled.td`
   font-family: Arial, Helvetica, sans-serif
   font-weight: bold;
   font-size: 30px;
-  
+  text-align: center
 `
 const StyledText = styled.td`
   font-family: Arial, Helvetica, sans-serif
@@ -89,7 +88,8 @@ export {
   components,
   Titles,
   BodyRow,
-  Bodytitle
+  Bodytitle,
+  CoinTitle
 }
 
 const columns = [
