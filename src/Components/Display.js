@@ -12,8 +12,7 @@ import {
   StyledBody,
   StyledHead,
   StyledColumn,
-  FirstColumn,
-  CoinTitle
+  FirstColumn
 } from './styled'
 
 import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
@@ -40,7 +39,7 @@ const Display = ({ rates, variation }) => {
 
       <StyledHead>
         <BodyRow>
-          <CoinTitle>#</CoinTitle>
+          <Bodytitle>#</Bodytitle>
           <Bodytitle>Coin</Bodytitle>
           <Bodytitle>USD Price</Bodytitle>
           <Bodytitle>Volume24h</Bodytitle>
@@ -72,7 +71,7 @@ const Display = ({ rates, variation }) => {
           return (
             <BodyRow key={uid(x)}>
               <StyledName>{humm}</StyledName>
-              <StyledName>{x.name}</StyledName>{' '}
+              <StyledName>{x.symbol}</StyledName>{' '}
               <StyledText>{'$' + UsdPrice}</StyledText>
               <StyledText>{'$' + Volume24h}</StyledText>
               <StyledBubble>

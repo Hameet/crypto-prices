@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import Display from './containers/Display'
+import img from './images/pig.jpeg'
 
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
@@ -13,10 +14,10 @@ function App ({ getData }) {
     <div>
       {' '}
       {getData()}
-      <StyledHeader />
-    
-        <Display />
-      
+      <StyledHeader>
+        <img src={img} />
+      </StyledHeader>
+      <Display />
     </div>
   )
 }

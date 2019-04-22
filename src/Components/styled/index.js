@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { map, forEach } from 'ramda'
 
 const StyledTable = styled.table`
   // display: flex;
@@ -7,6 +6,8 @@ const StyledTable = styled.table`
   justify-content: space-between
   border-collapse: collapse;  
   width: 100%;
+  margin-left: 30px;
+  margin-right: 30px;
   
   style="overflow-x:auto";
   border-spacing: 10px;
@@ -18,6 +19,7 @@ const BodyRow = styled.tr`
   }
   font-weight: bold;
   font-size: 15px;
+  padding-top: 15px;
 `
 const Bodytext = styled.td`
   text-align: center;
@@ -26,34 +28,25 @@ const Bodytext = styled.td`
 const Bodytitle = styled.th`
   color: red;
   font-weight: bold;
-  font-size: 30px;
-
-  background: #fff;
-  padding-top: -50px;
+  font-size: 20px;
+  background: whitesmoke;
+  padding-top: -55px;
+  line-height: 30px;
 `
 
-const CoinTitle = styled.th`
-  color: red;
-  font-weight: bold;
-  font-size: 30px;
-  background: #fff;
-  padding-top: -50px;
-  align-content: right;
-`
 const components = {
   body: { cell: Bodytext, row: BodyRow },
   header: { cell: Bodytitle }
 }
 
 const StyledHead = styled.thead`
-  margin-top: -25px;
- 
+  margin-top: -25px; 
 }
 `
 const StyledBody = styled.tbody`
   border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
+
+  // width: 100%;
 `
 
 const StyledColumn = styled.colgroup`
@@ -67,13 +60,17 @@ const FirstColumn = styled.col`
 const StyledName = styled.td`
   font-family: Arial, Helvetica, sans-serif
   font-weight: bold;
-  font-size: 30px;
-  text-align: center
+  font-size: 20px;
+  text-align: center;
+  padding-top: 15px;
+  margin: 0 auto;
 `
 const StyledText = styled.td`
   font-family: Arial, Helvetica, sans-serif
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  color: blue;
+  text-align: center;
    
 `
 export {
@@ -88,8 +85,7 @@ export {
   components,
   Titles,
   BodyRow,
-  Bodytitle,
-  CoinTitle
+  Bodytitle
 }
 
 const columns = [
