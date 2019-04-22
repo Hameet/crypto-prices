@@ -1,6 +1,5 @@
 import React from 'react'
 import { map, uniq } from 'ramda'
-
 import { uid } from 'react-uid'
 
 import {
