@@ -1,6 +1,6 @@
 import React from 'react'
 import { map, uniq } from 'ramda'
-import Table from 'rc-table'
+
 import { uid } from 'react-uid'
 
 import {
