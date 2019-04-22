@@ -35,7 +35,7 @@ const Display = ({ rates, variation }) => {
   // console.log('key', code)
   return (
     <StyledTable>
-      <FirstColumn />
+      {/* <FirstColumn /> */}
 
       <StyledHead>
         <BodyRow>
