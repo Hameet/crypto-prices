@@ -5,19 +5,17 @@ import { uid } from 'react-uid'
 
 import {
   StyledTable,
-  StyledBubble,
-  StyledBubble2,
-  StyledBubble3,
   StyledName,
   StyledText,
-  columns,
-  components,
-  Titles,
   BodyRow,
   Bodytitle,
   StyledBody,
-  StyledHead
+  StyledHead,
+  StyledColumn,
+  FirstColumn
 } from './styled'
+
+import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
 
 import { RoundOffPrice, RoundOffVol } from '../utilities'
 
@@ -37,6 +35,8 @@ const Display = ({ rates, variation }) => {
   // console.log('key', code)
   return (
     <StyledTable>
+      <FirstColumn />
+
       <StyledHead>
         <BodyRow>
           <Bodytitle>#</Bodytitle>
@@ -74,15 +74,15 @@ const Display = ({ rates, variation }) => {
               <StyledName>{x.name}</StyledName>{' '}
               <StyledText>{'$' + UsdPrice}</StyledText>
               <StyledText>{'$' + Volume24h}</StyledText>
-              <StyledBubble varied={varied}>
-                {x.percent_change_1h + '%'}
+              <StyledBubble>
+                <Box varied={varied}>{x.percent_change_1h + '%'}</Box>
               </StyledBubble>
-              <StyledBubble2 varied24={varied24}>
-                {x.percent_change_24h + '%'}
-              </StyledBubble2>
-              <StyledBubble3 varied7d={varied7d}>
-                {x.percent_change_7d + '%'}
-              </StyledBubble3>
+              <StyledBubble>
+                <Box2 varied24={varied24}>{x.percent_change_24h + '%'}</Box2>
+              </StyledBubble>
+              <StyledBubble>
+                <Box3 varied7d={varied7d}>{x.percent_change_7d + '%'}</Box3>
+              </StyledBubble>
               <StyledText>{'$' + MarketCap}</StyledText>
               <StyledText>{x.available_supply}</StyledText>
             </BodyRow>
