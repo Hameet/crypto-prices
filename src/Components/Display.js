@@ -6,6 +6,8 @@ import { uid } from 'react-uid'
 import {
   StyledTable,
   StyledBubble,
+  StyledBubble2,
+  StyledBubble3,
   StyledName,
   StyledText,
   columns,
@@ -37,16 +39,23 @@ const Display = ({ rates, variation }) => {
     <StyledTable>
       <StyledHead>
         <BodyRow>
+          <Bodytitle>#</Bodytitle>
           <Bodytitle>Coin</Bodytitle>
-          <Bodytitle>Coin</Bodytitle>
+          <Bodytitle>USD Price</Bodytitle>
+          <Bodytitle>Volume24h</Bodytitle>
+          <Bodytitle>1h</Bodytitle>
+          <Bodytitle>24h</Bodytitle>
+          <Bodytitle>7d</Bodytitle>
+          <Bodytitle>MarketCap</Bodytitle>
+          <Bodytitle>Available Supply</Bodytitle>
         </BodyRow>
       </StyledHead>
 
       <StyledBody>
         {map(x => {
-          const NewStyle = Wrapper(StyledBubble)
-          const factor = x.percent_change_1h
           const varied = isPositive(x.percent_change_1h)
+          const varied24 = isPositive(x.percent_change_24h)
+          const varied7d = isPositive(x.percent_change_7d)
           const num = x['24h_volume_usd']
           const UsdPrice = RoundOffPrice(x.price_usd)
           const Volume24h = num
@@ -56,22 +65,24 @@ const Display = ({ rates, variation }) => {
           const MarketCap = cap
             ? RoundOffVol(cap).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
             : null
-          console.log('percent change')
+          console.log('percent change', varied)
 
+          const humm = uid(x).replace(/\D/g, '') - 2
           return (
             <BodyRow key={uid(x)}>
+              <StyledName>{humm}</StyledName>
               <StyledName>{x.name}</StyledName>{' '}
               <StyledText>{'$' + UsdPrice}</StyledText>
               <StyledText>{'$' + Volume24h}</StyledText>
               <StyledBubble varied={varied}>
                 {x.percent_change_1h + '%'}
               </StyledBubble>
-              <StyledBubble varied={varied}>
+              <StyledBubble2 varied24={varied24}>
                 {x.percent_change_24h + '%'}
-              </StyledBubble>
-              <StyledBubble varied={varied}>
+              </StyledBubble2>
+              <StyledBubble3 varied7d={varied7d}>
                 {x.percent_change_7d + '%'}
-              </StyledBubble>
+              </StyledBubble3>
               <StyledText>{'$' + MarketCap}</StyledText>
               <StyledText>{x.available_supply}</StyledText>
             </BodyRow>

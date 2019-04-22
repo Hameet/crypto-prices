@@ -931,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-04-21T08:17:19.289Z",
+      "buildTime": "2019-04-22T01:38:52.756Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "063e4424c2e8a3f3c7adb24109a8498e",
+        "contentDigest": "f712ffe4a9f8d22ab48b3aa28b2b3641",
         "type": "Site",
         "owner": "internal-data-bridge"
       }

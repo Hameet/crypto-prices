@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import { map, forEach } from 'ramda'
 
 const StyledTable = styled.table`
-  display: flex;
+  // display: flex;
   justify-content: center;
   justify-content: space-between
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-collapse: collapse;  
   width: 100%;
   border: 1px solid #ddd;
   style="overflow-x:auto";
+  border-spacing: 10px;
 `
 const red = styled.p`
   color: red;
@@ -89,18 +89,49 @@ const StyledBody = styled.tbody`
 `
 
 const StyledBubble = styled.td`
-  border-radius: 15px;
-  content-align: center;
+  border-radius: 20px;
+  content-align: right;
+  text-align: right;
   color: white;
-  width: 35px;
+  width: 25px;
   border: 1px solid red;
-
   margin: 10px;
   font-weight: bold;
   font-size: 15px;
   background-color: ${({ varied }) => (varied ? 'red' : 'green')}};
   // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
 `
+
+const StyledBubble2 = styled.td`
+  border-radius: 20px;
+  content-align: right;
+  text-align: right;
+  color: white;
+  width: 25px;
+  border: 1px solid red;
+  border-spacing: 20px;
+  padding-left: 10px;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: ${({ varied24 }) => (varied24 ? 'red' : 'green')}};
+  // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
+`
+
+const StyledBubble3 = styled.td`
+  border-radius: 20px;
+  content-align: right;
+  text-align: right;
+  color: white;
+  width: 25px;
+  border: 1px solid red;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: ${({ varied7d }) => (varied7d ? 'red' : 'green')}};
+  // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
+`
+
 const StyledName = styled.td`
   font-family: Arial, Helvetica, sans-serif
   font-weight: bold;
@@ -114,6 +145,8 @@ const StyledText = styled.td`
 export {
   StyledTable,
   StyledBubble,
+  StyledBubble2,
+  StyledBubble3,
   StyledName,
   StyledText,
   StyledBody,
