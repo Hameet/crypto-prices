@@ -939,12 +939,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-04-23T00:48:28.461Z",
+      "buildTime": "2019-04-23T01:02:32.391Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "c0bfc8b230c87ffc6a2419166f46e089",
+        "contentDigest": "2b0dcb613fe27f84e8e3e22c6e935fce",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
