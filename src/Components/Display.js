@@ -1,5 +1,5 @@
 import React from 'react'
-import { map, uniq } from 'ramda'
+import { map } from 'ramda'
 import { uid } from 'react-uid'
 
 import {
@@ -10,37 +10,24 @@ import {
   Bodytitle,
   StyledBody,
   StyledHead,
-  StyledColumn,
-  FirstColumn
+  FirstColumn,
+  SecondColumn
 } from './styled'
 
 import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
 
 import {
   RoundOffPrice,
-  RoundOffVol,
   VolumeConvert,
-  ConvertSupply
+  ConvertSupply,
+  isPositive
 } from '../utilities'
 
-import getPriceVariation from '../state/selectors'
-
-import Wrapper from './wrappers'
-
-const isPositive = factor => factor < 0
-const data = [
-  { a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', key: 1 }
-]
-
-const Display = ({ rates, variation }) => {
-  // return isNil(Names) ? (
-  //   'Loading...............................'
-  // ) :
-  // console.log('key', code)
+const Display = ({ rates }) => {
   return (
     <StyledTable>
-      {/* <FirstColumn /> */}
-
+      {/* <FirstColumn />
+      <SecondColumn /> */}
       <StyledHead>
         <BodyRow>
           <Bodytitle>#</Bodytitle>
@@ -63,15 +50,14 @@ const Display = ({ rates, variation }) => {
           const UsdPrice = RoundOffPrice(x.price_usd)
           const Volume24h = VolumeConvert(x['24h_volume_usd'])
           const MarketCap = VolumeConvert(x.market_cap_usd)
-
           const AvailableSupply = ConvertSupply(x.available_supply)
 
           console.log('percent change', typeof AvailableSupply)
 
-          const humm = uid(x).replace(/\D/g, '') - 2
+          const Num = uid(x).replace(/\D/g, '') - 2
           return (
             <BodyRow key={uid(x)}>
-              <StyledName>{humm}</StyledName>
+              <StyledText>{Num}</StyledText>
               <StyledName>{x.symbol}</StyledName>{' '}
               <StyledText>{'$' + UsdPrice}</StyledText>
               <StyledText>{'$' + Volume24h}</StyledText>
@@ -95,10 +81,3 @@ const Display = ({ rates, variation }) => {
 }
 
 export default Display
-
-// <Table
-//   columns={columns}
-//   key={uid(x)}
-//   data={dat}
-//   components={components}
-// />

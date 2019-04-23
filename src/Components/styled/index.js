@@ -3,14 +3,16 @@ import styled from 'styled-components'
 const StyledTable = styled.table`
   display: table;
   overflow-y: hidden;
-    table-layout: auto;
+  table-layout: auto;
   justify-content: center;
   justify-content: space-between
   border-collapse: collapse;  
-  width: 100%;
+  width:80%; 
+    margin-left:10%; 
+    margin-right:25%;
   min-width: 910px
-  // margin-left: 50px;
-  // margin-right: 50px;
+  padding-left: 50px;
+  // margin-right: 150px;
   box-sizing: border-box;
   style="overflow-x:auto";
   border-spacing: 10px;
@@ -18,7 +20,7 @@ const StyledTable = styled.table`
 `
 const BodyRow = styled.tr`
   &:hover {
-    background: palevioletred !important;
+    background: #ffff99 !important;
   }
   font-weight: bold;
   font-size: 15px;
@@ -29,12 +31,12 @@ const Bodytext = styled.td`
   color: blue;
 `
 const Bodytitle = styled.th`
-  color: red;
+  color: black;
   font-weight: bold;
   font-size: 20px;
-  background: whitesmoke;
+  background: lightgrey;
   padding-top: -55px;
-  line-height: 30px;
+  line-height: 40px;
   // width: 50px;
 `
 
@@ -50,7 +52,7 @@ const StyledHead = styled.thead`
 `
 const StyledBody = styled.tbody`
   border-collapse: collapse;
-
+  margin-left: 50px;
   // width: 100%;
 `
 
@@ -59,7 +61,10 @@ const StyledColumn = styled.colgroup`
 `
 
 const FirstColumn = styled.col`
-  width: 5em;
+  width: 15em;
+`
+const SecondColumn = styled.col`
+  width: 15em;
 `
 
 const StyledName = styled.td`
@@ -69,19 +74,20 @@ const StyledName = styled.td`
   text-align: center;
   padding-top: 15px;
   margin: 0 auto;
-  // width: 60px;
+  color: purple;
 `
 const StyledText = styled.td`
   font-family: Arial, Helvetica, sans-serif
   font-weight: bold;
   font-size: 18px;
-  color: blue;
+  color: #428bca;;
   text-align: center;
   // width: 70px;
 `
 export {
   StyledColumn,
   FirstColumn,
+  SecondColumn,
   StyledTable,
   StyledName,
   StyledText,

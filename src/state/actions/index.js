@@ -1,4 +1,3 @@
-// const FETCH_PRICES = 'FETCH_PRICES'
 export const ITEMS_HAS_ERRORED = 'ITEMS_HAS_ERRORED'
 export const ITEMS_IS_LOADING = 'ITEMS_IS_LOADING'
 export const ITEMS_FETCH_DATA_SUCCESS = 'ITEMS_FETCH_DATA_SUCCESS'
@@ -23,12 +22,3 @@ export function itemsIsLoading (bool) {
     isLoading: bool
   }
 }
-
-// export { FETCH_PRICES, fetchPrices }
-
-// export function itemsFetchDataSuccess (items) {
-//     return {
-//       type: ITEMS_FETCH_DATA_SUCCESS,
-//       payload: items
-//     }
-//   }

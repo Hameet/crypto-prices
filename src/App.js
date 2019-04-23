@@ -21,9 +21,6 @@ function App ({ getData }) {
   )
 }
 
-const API_KEY = `89bcb9d40a3fd6b18613ef79499b757e`
-const key = `32d6e33b-dd31-4055-8bdb-7868f888d116`
-// const apiEndpoint = `http://api.coinlayer.com/api/live?access_key=${API_KEY}`
 const apiUrl = `https://api.alternative.me/v1/ticker/`
 const proxyurl = 'https://cors-anywhere.herokuapp.com/'
 
