@@ -7,7 +7,6 @@ import img from './images/pig.jpeg'
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
 import { StyledHeader } from './Components/Header'
-import { Bodytitle } from './Components/styled'
 
 function App ({ getData }) {
   return (
@@ -32,7 +31,7 @@ function mapDispatchToProps (dispatch) {
   return {
     getData: () => {
       dispatch(itemsIsLoading(true))
-      fetch(proxyurl + apiUrl)
+      fetch(apiUrl)
         .then(response => {
           if (!response.ok) {
             throw Error(response.statusText)

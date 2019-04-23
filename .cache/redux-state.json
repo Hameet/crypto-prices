@@ -1,23 +1,13 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
-      "jsonName": "dev-404-page-5f9",
-      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "/home/hameet/New/crypto-prices/.cache/dev-404-page.js",
-      "componentChunkName": "component---cache-dev-404-page-js",
-      "isCreatedByStatefulCreatePages": true,
-      "context": {},
-      "pluginCreator___NODE": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
-      "pluginCreatorId": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
-      "componentPath": "/home/hameet/New/crypto-prices/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": null,
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "d7fb59f8698b0b2c4a5641517780aa09",
-        "description": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
         "owner": "internal-data-bridge"
       }
     },
@@ -809,6 +799,10 @@
         ],
         "devDependencies": [
           {
+            "name": "gh-pages",
+            "version": "^2.0.1"
+          },
+          {
             "name": "prettier",
             "version": "^1.17.0"
           }
@@ -931,16 +925,14 @@
         "description": "Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.",
         "author": "@gatsbyjs"
       },
-      "port": 8000,
-      "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-04-22T11:55:48.145Z",
+      "buildTime": "2019-04-23T00:38:03.977Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "aa712fe9d60f81fce23739e1d0889832",
+        "contentDigest": "b9ebdeb6dee667d5291cbd753f2587d6",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1093,16 +1085,6 @@
       "ctime": "2019-04-18T02:24:40.714Z",
       "birthtime": "2019-04-18T02:24:40.714Z"
     },
-    "34466678-c835-5211-b9e3-51c6107eefb4": {
-      "id": "34466678-c835-5211-b9e3-51c6107eefb4",
-      "children": [],
-      "parent": "97015446-c629-510b-9681-f791c072d1c2",
-      "internal": {
-        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
-        "type": "ImageSharp",
-        "owner": "gatsby-transformer-sharp"
-      }
-    },
     "1f671196-df5b-5d49-9aa1-a139438be754": {
       "id": "1f671196-df5b-5d49-9aa1-a139438be754",
       "children": [
@@ -1149,6 +1131,16 @@
       "mtime": "2019-04-14T06:54:05.485Z",
       "ctime": "2019-04-18T02:24:40.714Z",
       "birthtime": "2019-04-18T02:24:40.714Z"
+    },
+    "34466678-c835-5211-b9e3-51c6107eefb4": {
+      "id": "34466678-c835-5211-b9e3-51c6107eefb4",
+      "children": [],
+      "parent": "97015446-c629-510b-9681-f791c072d1c2",
+      "internal": {
+        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
+      }
     },
     "b5ccd4ab-557c-5d9a-bb92-4b201e78ed76": {
       "id": "b5ccd4ab-557c-5d9a-bb92-4b201e78ed76",
@@ -1247,13 +1239,13 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "d50ede4ae155a664019d8192c882a391"
+    "PLUGINS_HASH": "7a5a3d08ac75dda1ee63453e18a789ba"
   },
   "componentDataDependencies": {
     "nodes": {
       "Site": [
-        "sq--src-gatsbycomponents-layout-js",
-        "sq--src-gatsbycomponents-seo-js"
+        "sq--src-gatsbycomponents-seo-js",
+        "sq--src-gatsbycomponents-layout-js"
       ],
       "1f671196-df5b-5d49-9aa1-a139438be754": [
         "sq--src-gatsbycomponents-image-js"
@@ -1275,14 +1267,6 @@
     "sq--src-gatsbycomponents-image-js": 2011440971
   },
   "components": {
-    "/home/hameet/New/crypto-prices/.cache/dev-404-page.js": {
-      "componentPath": "/home/hameet/New/crypto-prices/.cache/dev-404-page.js",
-      "query": "",
-      "pages": [
-        "/dev-404-page/"
-      ],
-      "isInBootstrap": true
-    },
     "/home/hameet/New/crypto-prices/src/pages/404.js": {
       "componentPath": "/home/hameet/New/crypto-prices/src/pages/404.js",
       "query": "",
