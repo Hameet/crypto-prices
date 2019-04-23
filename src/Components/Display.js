@@ -16,7 +16,12 @@ import {
 
 import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
 
-import { RoundOffPrice, RoundOffVol } from '../utilities'
+import {
+  RoundOffPrice,
+  RoundOffVol,
+  VolumeConvert,
+  ConvertSupply
+} from '../utilities'
 
 import getPriceVariation from '../state/selectors'
 
@@ -55,16 +60,13 @@ const Display = ({ rates, variation }) => {
           const varied = isPositive(x.percent_change_1h)
           const varied24 = isPositive(x.percent_change_24h)
           const varied7d = isPositive(x.percent_change_7d)
-          const num = x['24h_volume_usd']
           const UsdPrice = RoundOffPrice(x.price_usd)
-          const Volume24h = num
-            ? RoundOffVol(num).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-            : null
-          const cap = x.market_cap_usd
-          const MarketCap = cap
-            ? RoundOffVol(cap).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-            : null
-          console.log('percent change', varied)
+          const Volume24h = VolumeConvert(x['24h_volume_usd'])
+          const MarketCap = VolumeConvert(x.market_cap_usd)
+
+          const AvailableSupply = ConvertSupply(x.available_supply)
+
+          console.log('percent change', typeof AvailableSupply)
 
           const humm = uid(x).replace(/\D/g, '') - 2
           return (
@@ -83,7 +85,7 @@ const Display = ({ rates, variation }) => {
                 <Box3 varied7d={varied7d}>{x.percent_change_7d + '%'}</Box3>
               </StyledBubble>
               <StyledText>{'$' + MarketCap}</StyledText>
-              <StyledText>{x.available_supply}</StyledText>
+              <StyledText>{AvailableSupply}</StyledText>
             </BodyRow>
           )
         }, rates)}
