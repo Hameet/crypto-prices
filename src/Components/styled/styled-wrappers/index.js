@@ -9,6 +9,8 @@ const StyledBubble = styled.td`
   text-align: center !important;
   margin: auto;
   width: 100px;
+  padding-top: 15px;
+  padding-left: 5px;
 
   // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
 `
@@ -16,7 +18,6 @@ const StyledBubble = styled.td`
 const Box = styled.span`
   display: block;
   box-sizing: border-box;
-  padding-top: 4px;
   align-content: center;
   border-radius: 20px;
   text-align: center !important;
@@ -29,7 +30,6 @@ const Box = styled.span`
 const Box2 = styled.span`
   display: block;
   box-sizing: border-box;
-  padding-top: 4px;
   align-content: center;
   border-radius: 20px;
   text-align: center !important;
@@ -43,7 +43,6 @@ const Box2 = styled.span`
 const Box3 = styled.span`
   display: block;
   box-sizing: border-box;
-  padding-top: 4px;
   align-content: center;
   border-radius: 20px;
   text-align: center !important;

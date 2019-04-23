@@ -6,17 +6,22 @@ import img from './images/pig.gif'
 
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
-import { StyledHeader } from './Components/Header'
+import { StyledHeader, Image } from './Components/Header'
+import { Footer } from './Components/Footer'
+import { Page } from './Components/Page'
 
 function App ({ getData }) {
   return (
     <div>
       {' '}
       {getData()}
-      <StyledHeader>
-        <img src={img} />
-      </StyledHeader>
+      <Page>
+        <StyledHeader>
+          <Image src={img} />
+        </StyledHeader>
+      </Page>
       <Display />
+      <Footer />
     </div>
   )
 }

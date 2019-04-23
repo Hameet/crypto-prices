@@ -11,7 +11,8 @@ import {
   StyledBody,
   StyledHead,
   FirstColumn,
-  SecondColumn
+  SecondColumn,
+  BigWrapper
 } from './styled'
 
 import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
@@ -32,7 +33,7 @@ const Display = ({ rates }) => {
         <BodyRow>
           <Bodytitle>#</Bodytitle>
           <Bodytitle>Coin</Bodytitle>
-          <Bodytitle>USD Price</Bodytitle>
+          <Bodytitle>USD</Bodytitle>
           <Bodytitle>Volume24h</Bodytitle>
           <Bodytitle>1h</Bodytitle>
           <Bodytitle>24h</Bodytitle>

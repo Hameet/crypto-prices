@@ -1,8 +1,30 @@
 import styled from 'styled-components'
+import media from './Media'
+import { device } from '../device'
 
-const StyledTable = styled.table`
+const BigWrapper = styled.div`
+  margin: auto;
+  font-family: 'sans-serif';
+  text-align: center;
+
+  ${device.laptop`
+    max-width: 800px;
+  `}
+
+  ${device.desktop`
+    max-width: 1400px;
+  `};
+`
+
+const StyledTable = styled.div`
+@media ${device.laptop} {
+  flex-direction: row;
+}
+@media ${device.mobileL} {
+  flex-direction: row;
+}
   display: table;
-  overflow-y: hidden;
+  overflow-x:auto;
   table-layout: auto;
   justify-content: center;
   justify-content: space-between
@@ -12,11 +34,8 @@ const StyledTable = styled.table`
     margin-right:25%;
   min-width: 910px
   padding-left: 50px;
-  // margin-right: 150px;
   box-sizing: border-box;
-  style="overflow-x:auto";
-  border-spacing: 10px;
-  // table-layout: fixed ;
+  border-spacing: 0px;
 `
 const BodyRow = styled.tr`
   &:hover {
@@ -34,7 +53,9 @@ const Bodytitle = styled.th`
   color: black;
   font-weight: bold;
   font-size: 20px;
-  background: lightgrey;
+  background: #dd7b7b;
+  border: top 2px top;
+  border-radius: 10px;
   padding-top: -55px;
   line-height: 40px;
   // width: 50px;
@@ -72,9 +93,10 @@ const StyledName = styled.td`
   font-weight: bold;
   font-size: 20px;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 20px;
   margin: 0 auto;
   color: purple;
+  
 `
 const StyledText = styled.td`
   font-family: Arial, Helvetica, sans-serif
@@ -82,9 +104,11 @@ const StyledText = styled.td`
   font-size: 18px;
   color: #428bca;;
   text-align: center;
+  padding-top: 20px;
   // width: 70px;
 `
 export {
+  BigWrapper,
   StyledColumn,
   FirstColumn,
   SecondColumn,
