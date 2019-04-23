@@ -31,7 +31,7 @@ function mapDispatchToProps (dispatch) {
   return {
     getData: () => {
       dispatch(itemsIsLoading(true))
-      fetch(apiUrl)
+      fetch(proxyurl + apiUrl)
         .then(response => {
           if (!response.ok) {
             throw Error(response.statusText)
