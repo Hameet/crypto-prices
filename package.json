@@ -23,7 +23,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-observable": "^1.1.0",
     "reselect": "^4.0.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "styled-map": "^3.2.0-rc.1"
   },
   "devDependencies": {
     "prettier": "^1.17.0"

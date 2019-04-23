@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import Display from './containers/Display'
-import img from './images/pig.jpeg'
+import img from './images/pig.gif'
 
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
