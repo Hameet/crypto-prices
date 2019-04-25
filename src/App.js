@@ -8,7 +8,7 @@ import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
 import { StyledHeader, Image } from './Components/Header'
 import { Footer } from './Components/Footer'
-import { Page } from './Components/Page'
+import { Page } from './Components/styled/Page'
 
 function App ({ getData }) {
   return (

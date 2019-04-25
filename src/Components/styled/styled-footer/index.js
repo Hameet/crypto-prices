@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import styledMap from 'styled-map'
 
 const Wrapper = styled.div`
   margin-top: 50px;
