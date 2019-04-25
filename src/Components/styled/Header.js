@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import styledMap from 'styled-map'
 
-import img from '../images/pig.jpeg'
+import img from '../../images/pig.jpeg'
 
 import { device } from './device'
 
@@ -24,7 +23,7 @@ display: flex;
   box-shadow: 5px 5px #ccc;
   padding: 10px;
   margin: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   ${device.laptop`
     flex-direction: row;
   `};

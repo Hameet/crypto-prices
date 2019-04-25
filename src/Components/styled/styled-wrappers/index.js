@@ -9,7 +9,7 @@ const StyledBubble = styled.td`
   text-align: center !important;
   margin: auto;
   width: 100px;
-  padding-top: 15px;
+  padding-top: 10px;
   padding-left: 5px;
 
   // return str.substring(0, str.length - 1) < 0 ? 'red' : 'green'
@@ -24,7 +24,7 @@ const Box = styled.span`
 
   width: 80px !important;
   height: 20px !important;
-  background-color: ${({ varied }) => (varied ? '#ed5565' : 'green')}};
+  background-color: ${({ varied }) => (varied ? '#ed5565' : '#57bd0f')}};
 `
 
 const Box2 = styled.span`
@@ -37,7 +37,7 @@ const Box2 = styled.span`
   width: 80px !important;
   height: 20px !important;
 
-  background-color: ${({ varied24 }) => (varied24 ? '#ed5565' : 'green')}};
+  background-color: ${({ varied24 }) => (varied24 ? '#ed5565' : '#57bd0f')}};
 `
 
 const Box3 = styled.span`
@@ -49,7 +49,7 @@ const Box3 = styled.span`
 
   width: 80px !important;
   height: 20px !important;
-  background-color: ${({ varied7d }) => (varied7d ? '#ed5565' : 'green')}};
+  background-color: ${({ varied7d }) => (varied7d ? '#ed5565' : '#57bd0f')}};
 `
 
 export { StyledBubble, Box, Box2, Box3 }

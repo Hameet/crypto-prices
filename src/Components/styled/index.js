@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { device } from '../device'
+import { device } from './device'
 
 const BigWrapper = styled.div`
   margin: auto;
@@ -39,12 +39,31 @@ const StyledTable = styled.div`
 `
 const BodyRow = styled.tr`
   &:hover {
-    background: #ffff99 !important;
+    background: #f2d2c4 !important;
+    transform: scale(1.1);
+    height: 10px;
   }
   font-weight: bold;
   font-size: 15px;
-  padding-top: 15px;
+  padding-top: 10px;
+  align-content: center;
 `
+
+const HeadRow = styled.tr`
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 10px;
+  align-content: center;
+  border-bottom: 5px solid white;
+  border-top: 5px solid white;
+  border: top 2px top;
+  color: transparent;
+  box-shadow: 0 1px 10px #000000;
+  padding: 0.1em 0;
+
+  background-color: #ccc;
+`
+
 const Bodytext = styled.td`
   text-align: center;
   color: blue;
@@ -53,11 +72,7 @@ const Bodytitle = styled.th`
   color: black;
   font-weight: bold;
   font-size: 20px;
-  background: #dd7b7b;
-  border: top 2px top;
-  border-radius: 10px;
-  padding-top: -55px;
-  line-height: 40px;
+  // background: #dd7b7b;
   // width: 50px;
 `
 
@@ -67,8 +82,13 @@ const components = {
 }
 
 const StyledHead = styled.thead`
-  margin-top: -25px;
+  margin-bottom: 20px;
   box-sizing: border-box; 
+  content: "-";
+    // display: block; 
+  border-radius: 10px;
+  padding-top: -60px;
+  line-height: 40px;
 }
 `
 const StyledBody = styled.tbody`
@@ -93,7 +113,7 @@ const StyledName = styled.td`
   font-weight: bold;
   font-size: 20px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
   margin: 0 auto;
   color: purple;
   
@@ -104,14 +124,13 @@ const StyledText = styled.td`
   font-size: 18px;
   color: #428bca;;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
+  // padding-bottom: 10px;
+  align-content: center;
   // width: 70px;
 `
 export {
   BigWrapper,
-  StyledColumn,
-  FirstColumn,
-  SecondColumn,
   StyledTable,
   StyledName,
   StyledText,
@@ -119,7 +138,7 @@ export {
   StyledHead,
   columns,
   components,
-  Titles,
+  HeadRow,
   BodyRow,
   Bodytitle
 }

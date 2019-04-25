@@ -12,7 +12,8 @@ import {
   StyledHead,
   FirstColumn,
   SecondColumn,
-  BigWrapper
+  BigWrapper,
+  HeadRow
 } from './styled'
 
 import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
@@ -30,7 +31,7 @@ const Display = ({ rates }) => {
       {/* <FirstColumn />
       <SecondColumn /> */}
       <StyledHead>
-        <BodyRow>
+        <HeadRow>
           <Bodytitle>#</Bodytitle>
           <Bodytitle>Coin</Bodytitle>
           <Bodytitle>USD</Bodytitle>
@@ -40,7 +41,7 @@ const Display = ({ rates }) => {
           <Bodytitle>7d</Bodytitle>
           <Bodytitle>MarketCap</Bodytitle>
           <Bodytitle>Available Supply</Bodytitle>
-        </BodyRow>
+        </HeadRow>
       </StyledHead>
 
       <StyledBody>
