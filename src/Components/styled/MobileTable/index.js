@@ -8,7 +8,7 @@ const BigWrapper = styled.div`
   text-align: center;
 `
 
-const StyledTable = styled.div`
+const StyledTable = styled.table`
   background-color: whitesmoke !important;
   display: table !important;
   overflow-x:auto;
