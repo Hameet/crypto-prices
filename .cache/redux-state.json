@@ -943,12 +943,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-04-25T08:50:32.641Z",
+      "buildTime": "2019-04-25T09:06:08.703Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "3c056071a6057b92217afc720e109972",
+        "contentDigest": "473fbe532f0349d35ab20ce6befd6684",
         "type": "Site",
         "owner": "internal-data-bridge"
       }

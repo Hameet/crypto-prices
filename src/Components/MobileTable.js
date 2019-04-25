@@ -10,19 +10,16 @@ import {
   Bodytitle,
   StyledBody,
   StyledHead,
-  FirstColumn,
-  SecondColumn,
-  BigWrapper,
   HeadRow
 } from './styled/MobileTable'
 
-import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
+import { StyledBubble, Box2 } from './styled/styled-wrappers'
 
 import {
   RoundOffPrice,
+  isPositive,
   VolumeConvert,
-  ConvertSupply,
-  isPositive
+  RoundOffBig
 } from '../utilities'
 
 const MobileTable = ({ rates }) => {
@@ -30,10 +27,10 @@ const MobileTable = ({ rates }) => {
     <StyledTable>
       <StyledHead>
         <HeadRow>
-          {/* <Bodytitle>#</Bodytitle> */}
           <Bodytitle>Coin</Bodytitle>
           <Bodytitle>USD</Bodytitle>
           <Bodytitle>24h</Bodytitle>
+          <Bodytitle>Cap</Bodytitle>
         </HeadRow>
       </StyledHead>
 
@@ -41,16 +38,16 @@ const MobileTable = ({ rates }) => {
         {map(x => {
           const varied24 = isPositive(x.percent_change_24h)
           const UsdPrice = RoundOffPrice(x.price_usd)
-          const Volume24h = VolumeConvert(x['24h_volume_usd'])
-          const Num = uid(x).replace(/\D/g, '') - 2
+          const MarketCap = RoundOffBig(x.market_cap_usd)
+          console.log('round', RoundOffBig(x.market_cap_usd))
           return (
             <BodyRow key={uid(x)}>
-              {/* <StyledText>{Num}</StyledText> */}
               <StyledName>{x.symbol}</StyledName>{' '}
               <StyledText>{'$' + UsdPrice}</StyledText>
               <StyledBubble>
                 <Box2 varied24={varied24}>{x.percent_change_24h + '%'}</Box2>
               </StyledBubble>
+              <StyledText>{'$' + MarketCap}</StyledText>
             </BodyRow>
           )
         }, rates)}

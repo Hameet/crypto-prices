@@ -10,9 +10,6 @@ import {
   Bodytitle,
   StyledBody,
   StyledHead,
-  FirstColumn,
-  SecondColumn,
-  BigWrapper,
   HeadRow
 } from './styled/DesktopTable'
 
@@ -28,8 +25,6 @@ import {
 const DesktopTable = ({ rates }) => {
   return (
     <StyledTable>
-      {/* <FirstColumn />
-      <SecondColumn /> */}
       <StyledHead>
         <HeadRow>
           <Bodytitle>#</Bodytitle>

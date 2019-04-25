@@ -1,37 +1,17 @@
 import styled from 'styled-components'
 
-import { device } from '../device'
-
-const BigWrapper = styled.div`
-  margin: auto;
-  font-family: 'sans-serif';
-  text-align: center;
-
-  ${device.laptop`
-    max-width: 800px;
-  `}
-
-  ${device.desktop`
-    max-width: 1400px;
-  `};
-`
-
 const StyledTable = styled.table`
-@media ${device.laptop} {
-  flex-direction: row;
-}
-@media ${device.mobileL} {
-  flex-direction: row;
-}
+
   display: table;
   overflow-x:auto;
   table-layout: auto;
   justify-content: center;
   justify-content: space-between
   border-collapse: collapse;  
-  width:80%; 
-    margin-left:10%; 
-    margin-right:25%;
+  width: 80%; 
+  margin: 0 auto;
+    // margin-left:10%; 
+    // margin-right:25%;
   min-width: 910px
   padding-left: 50px;
   box-sizing: border-box;
@@ -39,7 +19,7 @@ const StyledTable = styled.table`
 `
 const BodyRow = styled.tr`
   &:hover {
-    background: #f2d2c4 !important;
+    background: #354052 !important;
     transform: scale(1.1);
     height: 10px;
   }
@@ -60,7 +40,6 @@ const HeadRow = styled.tr`
   color: transparent;
   box-shadow: 0 1px 10px #000000;
   padding: 0.1em 0;
-
   background-color: #ccc;
 `
 
@@ -76,11 +55,6 @@ const Bodytitle = styled.th`
   // width: 50px;
 `
 
-const components = {
-  body: { cell: Bodytext, row: BodyRow },
-  header: { cell: Bodytitle }
-}
-
 const StyledHead = styled.thead`
   margin-bottom: 20px;
   box-sizing: border-box; 
@@ -91,22 +65,7 @@ const StyledHead = styled.thead`
   line-height: 40px;
 }
 `
-const StyledBody = styled.tbody`
-  border-collapse: collapse;
-  margin-left: 50px;
-  // width: 100%;
-`
-
-const StyledColumn = styled.colgroup`
-  width: 2em;
-`
-
-const FirstColumn = styled.col`
-  width: 15em;
-`
-const SecondColumn = styled.col`
-  width: 15em;
-`
+const StyledBody = styled.tbody``
 
 const StyledName = styled.td`
   font-family: Arial, Helvetica, sans-serif
@@ -130,42 +89,12 @@ const StyledText = styled.td`
   // width: 70px;
 `
 export {
-  BigWrapper,
   StyledTable,
   StyledName,
   StyledText,
   StyledBody,
   StyledHead,
-  columns,
-  components,
   HeadRow,
   BodyRow,
   Bodytitle
 }
-
-const columns = [
-  {
-    dataIndex: 'a',
-    key: 1,
-    width: 200
-  },
-  { dataIndex: 'b', key: 2, width: 200 },
-  { dataIndex: 'c', key: 'c', width: 200 },
-  { dataIndex: 'd', key: 'd', width: 200 },
-  { dataIndex: 'e', key: 'e', width: 200 },
-  { dataIndex: 'f', key: 'f', width: 200 },
-  { dataIndex: 'g', key: 'g', width: 200 },
-  { dataIndex: 'h', key: 'h', width: 200 }
-]
-
-const Titles = [
-  { title: 'Coin', width: 200 },
-  { title: 'Price', width: 200 },
-
-  { title: 'Volume24h', width: 200 },
-  { title: 'PriceChange-1h', width: 200 },
-  { title: 'PriceChange-24h', width: 200 },
-  { title: 'PriceChange-7d', width: 200 },
-  { title: 'MarketCap', width: 200 },
-  { title: 'Available-Supply', width: 200 }
-]
