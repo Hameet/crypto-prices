@@ -7,7 +7,7 @@ import img from './images/pig.gif'
 
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 
-import { StyledHeader, Image } from './Components/styled/Header'
+import { StyledHeader, Image } from './Components/styled/styled-header'
 import { Footer } from './Components/Footer'
 import { Page } from './Components/styled/Page'
 

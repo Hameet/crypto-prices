@@ -1,24 +1,12 @@
 import styled from 'styled-components'
 
-import img from '../../images/pig.jpeg'
+import img from '../../../images/pig.jpeg'
 
 import { device } from '../device'
-
-// const device = {
-//   mobileS: `(min-width: ${size.mobileS})`,
-//   mobileM: `(min-width: ${size.mobileM})`,
-//   mobileL: `(min-width: ${size.mobileL})`,
-//   tablet: `(min-width: ${size.tablet})`,
-//   laptop: `(min-width: ${size.laptop})`,
-//   laptopL: `(min-width: ${size.laptopL})`,
-//   desktop: `(min-width: ${size.desktop})`,
-//   desktopL: `(min-width: ${size.desktop})`
-// }
 
 const StyledHeader = styled.div`
 display: flex;
   flex-direction: column;
-  
   border: 1px solid gray;
   box-shadow: 5px 5px #ccc;
   padding: 10px;
