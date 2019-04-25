@@ -14,7 +14,7 @@ import {
   SecondColumn,
   BigWrapper,
   HeadRow
-} from './styled'
+} from './styled/DesktopTable'
 
 import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
 
@@ -25,7 +25,7 @@ import {
   isPositive
 } from '../utilities'
 
-const Display = ({ rates }) => {
+const DesktopTable = ({ rates }) => {
   return (
     <StyledTable>
       {/* <FirstColumn />
@@ -82,4 +82,4 @@ const Display = ({ rates }) => {
   )
 }
 
-export default Display
+export default DesktopTable

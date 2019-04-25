@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import img from '../../images/pig.jpeg'
 
-import { device } from './device'
+import { device } from '../device'
 
 // const device = {
 //   mobileS: `(min-width: ${size.mobileS})`,

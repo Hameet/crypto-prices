@@ -14,7 +14,7 @@ import {
   SecondColumn,
   BigWrapper,
   HeadRow
-} from './styled'
+} from './styled/MobileTable'
 
 import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
 
@@ -30,7 +30,7 @@ const MobileTable = ({ rates }) => {
     <StyledTable>
       <StyledHead>
         <HeadRow>
-          <Bodytitle>#</Bodytitle>
+          {/* <Bodytitle>#</Bodytitle> */}
           <Bodytitle>Coin</Bodytitle>
           <Bodytitle>USD</Bodytitle>
           <Bodytitle>24h</Bodytitle>
@@ -45,7 +45,7 @@ const MobileTable = ({ rates }) => {
           const Num = uid(x).replace(/\D/g, '') - 2
           return (
             <BodyRow key={uid(x)}>
-              <StyledText>{Num}</StyledText>
+              {/* <StyledText>{Num}</StyledText> */}
               <StyledName>{x.symbol}</StyledName>{' '}
               <StyledText>{'$' + UsdPrice}</StyledText>
               <StyledBubble>

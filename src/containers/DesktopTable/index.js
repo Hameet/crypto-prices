@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import Display from '../../Components/Display'
+import DesktopTable from '../../Components/DesktopTable'
 
 import { getRates } from '../../state/selectors'
 
@@ -10,4 +10,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Display)
+export default connect(mapStateToProps)(DesktopTable)

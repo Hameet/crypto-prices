@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import Display from './containers/Display'
+import DesktopTable from './containers/DesktopTable'
 import MobileTable from './containers/MobileTable'
 import img from './images/pig.gif'
 
@@ -29,8 +29,11 @@ function App ({ getData }) {
         </StyledHeader>
       </Page>
       <Desktop>
-        <Display />
+        <DesktopTable />
       </Desktop>
+      <Tablet>
+        <DesktopTable />
+      </Tablet>
       <Mobile>
         <MobileTable />
       </Mobile>

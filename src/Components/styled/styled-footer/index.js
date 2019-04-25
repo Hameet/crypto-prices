@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   //   padding-left: 20px;
   //   padding-right: 20px;
   //   margin-left: -20px;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   left: 0;
   bottom: 0;

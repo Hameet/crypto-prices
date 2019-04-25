@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { device } from './device'
+import { device } from '../device'
 
 const BigWrapper = styled.div`
   margin: auto;
@@ -16,7 +16,7 @@ const BigWrapper = styled.div`
   `};
 `
 
-const StyledTable = styled.div`
+const StyledTable = styled.table`
 @media ${device.laptop} {
   flex-direction: row;
 }
