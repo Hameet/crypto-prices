@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import Display from './containers/Display'
+import MobileTable from './containers/MobileTable'
 import img from './images/pig.gif'
 
 import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
@@ -9,6 +10,13 @@ import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 import { StyledHeader, Image } from './Components/styled/Header'
 import { Footer } from './Components/Footer'
 import { Page } from './Components/styled/Page'
+
+import Responsive from 'react-responsive'
+
+const Desktop = props => <Responsive {...props} minWidth={992} />
+const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />
+const Mobile = props => <Responsive {...props} maxWidth={767} />
+const Default = props => <Responsive {...props} minWidth={768} />
 
 function App ({ getData }) {
   return (
@@ -20,7 +28,12 @@ function App ({ getData }) {
           <Image src={img} />
         </StyledHeader>
       </Page>
-      <Display />
+      <Desktop>
+        <Display />
+      </Desktop>
+      <Mobile>
+        <MobileTable />
+      </Mobile>
       <Footer />
     </div>
   )
