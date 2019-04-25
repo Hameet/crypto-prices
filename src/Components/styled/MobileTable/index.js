@@ -9,8 +9,8 @@ const BigWrapper = styled.div`
 `
 
 const StyledTable = styled.div`
-
-  display: table;
+  background-color: whitesmoke !important;
+  display: table !important;
   overflow-x:auto;
   table-layout: auto;
   justify-content: center;
