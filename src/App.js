@@ -40,7 +40,7 @@ function App ({ getData }) {
         <DesktopTable />
       </Tablet>
       <Mobile>
-        <MobileTop />
+        {/* <MobileTop /> */}
         <MobileTable />
       </Mobile>
       <Footer />
