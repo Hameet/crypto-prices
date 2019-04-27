@@ -15,7 +15,7 @@ const StyledTable = styled.table`
 `
 const BodyRow = styled.tr`
   &:hover {
-    background: #e6f9ff !important;
+    background: #ffffcc !important;
     height: 10px;
   }
   padding-top: 10px;
@@ -33,7 +33,7 @@ const HeadRow = styled.tr`
   color: transparent;
   box-shadow: 0 1px 10px #000000;
   padding: 0.1em 0;
-  background-color: #ccc;
+  background-color: #ed5565;
 `
 const Bodytitle = styled.th`
   color: black;
@@ -57,9 +57,7 @@ const StyledName = styled.td`
   font-size: 20px;
   text-align: center;
   padding-top: 10px;
-  margin: 0 auto;
-  color: purple;
-  
+  margin: 0 auto;  
 `
 const StyledText = styled.td`
   font-family: Arial, Helvetica, sans-serif

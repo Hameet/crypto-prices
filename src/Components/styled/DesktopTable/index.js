@@ -19,7 +19,7 @@ const StyledTable = styled.table`
 `
 const BodyRow = styled.tr`
   &:hover {
-    background: #354052 !important;
+    background: #ffffcc !important;
     transform: scale(1.1);
     height: 10px;
   }
@@ -73,9 +73,7 @@ const StyledName = styled.td`
   font-size: 20px;
   text-align: center;
   padding-top: 10px;
-  margin: 0 auto;
-  color: purple;
-  
+  margin: 0 auto;  
 `
 const StyledText = styled.td`
   font-family: Arial, Helvetica, sans-serif
