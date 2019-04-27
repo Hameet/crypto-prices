@@ -40,7 +40,7 @@ const HeadRow = styled.tr`
   color: transparent;
   box-shadow: 0 1px 10px #000000;
   padding: 0.1em 0;
-  background-color: #ccc;
+  background-color: #ed5565;
 `
 
 const Bodytext = styled.td`
