@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-const MobileHeader = styled.header`
+const Wrapper = styled.div`
   margin-bottom: 20px;
   flex-direction: row;
   left: 0;
@@ -35,4 +35,4 @@ const GlowingText = styled.p`
   animation: ${transition} 2s linear infinite;
 `
 
-export { MobileHeader, GlowingText }
+export { Wrapper, GlowingText }
