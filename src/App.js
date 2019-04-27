@@ -10,7 +10,7 @@ import { fetchPrices, itemsHasErrored, itemsIsLoading } from './state/actions'
 import { StyledHeader, Image } from './Components/styled/styled-header'
 import { Footer } from './Components/Footer'
 import { Page } from './Components/styled/Page'
-import { MobileHeader } from './Components/MobileHeader'
+import { MobileTop } from './Components/MobileTop'
 
 import Responsive from 'react-responsive'
 
@@ -32,10 +32,15 @@ function App ({ getData }) {
         <DesktopTable />
       </Desktop>
       <Tablet>
+        <Page>
+          <StyledHeader>
+            <Image src={img} />
+          </StyledHeader>
+        </Page>
         <DesktopTable />
       </Tablet>
       <Mobile>
-        <MobileHeader />
+        <MobileTop />
         <MobileTable />
       </Mobile>
       <Footer />

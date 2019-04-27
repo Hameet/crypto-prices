@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Wrapper, GlowingText } from './styled/mobile-header'
 
-const MobileHeader = () => {
+const MobileTop = () => {
   return (
     <>
       <Wrapper>
@@ -12,4 +12,4 @@ const MobileHeader = () => {
   )
 }
 
-export { MobileHeader }
+export { MobileTop }
