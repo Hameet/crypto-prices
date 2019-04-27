@@ -30,6 +30,7 @@ function App ({ getData }) {
           </StyledHeader>
         </Page>
         <DesktopTable />
+        <Footer />
       </Desktop>
       <Tablet>
         <Page>
@@ -38,12 +39,13 @@ function App ({ getData }) {
           </StyledHeader>
         </Page>
         <DesktopTable />
+        <Footer />
       </Tablet>
       <Mobile>
-        {/* <MobileTop /> */}
+        <MobileTop />
         <MobileTable />
+        <Footer />
       </Mobile>
-      <Footer />
     </div>
   )
 }
