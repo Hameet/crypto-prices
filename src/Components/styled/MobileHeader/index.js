@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-const MobileHeader = styled.div`
+const MobileHeader = styled.header`
   margin-bottom: 20px;
   flex-direction: row;
   left: 0;
