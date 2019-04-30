@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "crypto-pig",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple API which fetches crypto prices, static website by Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Hameet Singh",
   "dependencies": {
     "gatsby": "^2.3.16",
     "gatsby-image": "^2.0.37",
@@ -23,10 +23,7 @@
     "react-responsive": "^6.1.1",
     "react-uid": "^2.2.0",
     "redux-devtools-extension": "^2.13.8",
-    "redux-observable": "^1.1.0",
-    "reselect": "^4.0.0",
-    "styled-components": "^4.2.0",
-    "styled-map": "^3.2.0-rc.1"
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
