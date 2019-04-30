@@ -15,12 +15,7 @@ import {
 
 import { StyledBubble, Box2 } from './styled/styled-wrappers'
 
-import {
-  RoundOffPrice,
-  isPositive,
-  VolumeConvert,
-  RoundOffBig
-} from '../utilities'
+import { RoundOffPrice, isPositive, RoundOffBig } from '../utilities'
 
 const MobileTable = ({ rates }) => {
   return (
@@ -39,7 +34,7 @@ const MobileTable = ({ rates }) => {
           const varied24 = isPositive(x.percent_change_24h)
           const UsdPrice = RoundOffPrice(x.price_usd)
           const MarketCap = RoundOffBig(x.market_cap_usd)
-          console.log('round', RoundOffBig(x.market_cap_usd))
+
           return (
             <BodyRow key={uid(x)}>
               <StyledName>{x.symbol}</StyledName>{' '}

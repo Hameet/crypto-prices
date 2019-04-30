@@ -68,11 +68,9 @@ function mapDispatchToProps (dispatch) {
             return response
           })
           .then(function (response) {
-            // console.log('jason', response.json())
             return response.json()
           })
           .then(function (items) {
-            console.log('app', items)
             return dispatch(fetchPrices(items))
           })
           .catch(() => dispatch(itemsHasErrored(true)))

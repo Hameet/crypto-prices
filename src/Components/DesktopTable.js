@@ -48,10 +48,8 @@ const DesktopTable = ({ rates }) => {
           const Volume24h = VolumeConvert(x['24h_volume_usd'])
           const MarketCap = VolumeConvert(x.market_cap_usd)
           const AvailableSupply = ConvertSupply(x.available_supply)
-
-          console.log('percent change', typeof AvailableSupply)
-
           const Num = uid(x).replace(/\D/g, '') - 2
+
           return (
             <BodyRow key={uid(x)}>
               <StyledText>{Num}</StyledText>

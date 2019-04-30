@@ -43,10 +43,6 @@ const HeadRow = styled.tr`
   background-color: #ed5565;
 `
 
-const Bodytext = styled.td`
-  text-align: center;
-  color: blue;
-`
 const Bodytitle = styled.th`
   color: black;
   font-weight: bold;

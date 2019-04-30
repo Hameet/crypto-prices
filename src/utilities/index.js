@@ -18,7 +18,7 @@ const RoundOffVol = s => {
       : Number(s)
 }
 
-export const RoundOffBig = (num, locale = 'en') => {
+export const RoundOffBig = (num) => {
   // Nine Zeroes for Billions
   return Math.abs(Number(num)) >= 1.0e9
     ? Math.round(Math.abs(Number(num)) / 1.0e9) + 'B'

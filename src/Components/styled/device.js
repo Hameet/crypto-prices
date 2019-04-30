@@ -14,5 +14,6 @@ export const device = Object.keys(size).reduce((acc, key) => {
         ${style};
       }
     `
+
   return acc
 }, {})
