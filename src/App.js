@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Lines } from 'react-preloading-component'
 
 import DesktopTable from './containers/DesktopTable'
 import MobileTable from './containers/MobileTable'
@@ -19,6 +20,7 @@ const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />
 const Mobile = props => <Responsive {...props} maxWidth={767} />
 
 function App ({ getData }) {
+  console.log('getdata', getData)
   return (
     <div>
       {' '}

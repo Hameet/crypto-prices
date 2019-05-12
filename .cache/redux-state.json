@@ -731,6 +731,14 @@
         "license": "MIT",
         "dependencies": [
           {
+            "name": "babel-jest",
+            "version": "^24.8.0"
+          },
+          {
+            "name": "babel-preset-gatsby",
+            "version": "^0.1.11"
+          },
+          {
             "name": "gatsby",
             "version": "^2.3.16"
           },
@@ -767,6 +775,14 @@
             "version": "^2.1.17"
           },
           {
+            "name": "identity-obj-proxy",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "jest",
+            "version": "^24.8.0"
+          },
+          {
             "name": "prop-types",
             "version": "^15.7.2"
           },
@@ -787,12 +803,20 @@
             "version": "^5.2.0"
           },
           {
+            "name": "react-preloading-component",
+            "version": "^0.0.5"
+          },
+          {
             "name": "react-redux",
             "version": "^7.0.2"
           },
           {
             "name": "react-responsive",
             "version": "^6.1.1"
+          },
+          {
+            "name": "react-test-renderer",
+            "version": "^16.8.6"
           },
           {
             "name": "react-uid",
@@ -809,8 +833,28 @@
         ],
         "devDependencies": [
           {
+            "name": "enzyme",
+            "version": "^3.9.0"
+          },
+          {
+            "name": "enzyme-adapter-react-16",
+            "version": "^1.12.1"
+          },
+          {
+            "name": "enzyme-to-json",
+            "version": "^3.3.5"
+          },
+          {
+            "name": "jest-enzyme",
+            "version": "^7.0.2"
+          },
+          {
             "name": "prettier",
             "version": "^1.17.0"
+          },
+          {
+            "name": "redux-mock-store",
+            "version": "^1.5.3"
           }
         ],
         "peerDependencies": [],
@@ -935,12 +979,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-05-05T05:56:59.582Z",
+      "buildTime": "2019-05-12T10:02:20.129Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "f618a8371e5c59ed8dfe218df1bb8fcf",
+        "contentDigest": "d805fe98e8a4f60fc13da37c7f9669eb",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -950,7 +994,7 @@
       "children": [],
       "parent": null,
       "internal": {
-        "contentDigest": "0afc6932ff413f516577bc57fdfbcff6",
+        "contentDigest": "905652e020054eb65078870efcd59085",
         "type": "Directory",
         "description": "Directory \"src/images\"",
         "owner": "gatsby-source-filesystem"
@@ -962,7 +1006,7 @@
       "size": 4096,
       "prettySize": "4.1 kB",
       "modifiedTime": "2019-05-05T05:55:48.850Z",
-      "accessTime": "2019-05-05T05:57:02.890Z",
+      "accessTime": "2019-05-12T05:54:56.768Z",
       "changeTime": "2019-05-05T05:55:48.850Z",
       "birthTime": "2019-05-05T05:55:48.850Z",
       "root": "/",
@@ -980,11 +1024,11 @@
       "blksize": 4096,
       "ino": 1558169,
       "blocks": 8,
-      "atimeMs": 1557035822889.768,
+      "atimeMs": 1557640496768.2568,
       "mtimeMs": 1557035748850.381,
       "ctimeMs": 1557035748850.381,
       "birthtimeMs": 1557035748850.381,
-      "atime": "2019-05-05T05:57:02.890Z",
+      "atime": "2019-05-12T05:54:56.768Z",
       "mtime": "2019-05-05T05:55:48.850Z",
       "ctime": "2019-05-05T05:55:48.850Z",
       "birthtime": "2019-05-05T05:55:48.850Z"
@@ -1008,10 +1052,10 @@
       "extension": "png",
       "size": 21212,
       "prettySize": "21.2 kB",
-      "modifiedTime": "2019-04-14T06:54:05.485Z",
-      "accessTime": "2019-04-30T01:49:23.356Z",
-      "changeTime": "2019-04-18T02:24:40.714Z",
-      "birthTime": "2019-04-18T02:24:40.714Z",
+      "modifiedTime": "2019-05-05T05:55:48.846Z",
+      "accessTime": "2019-05-12T07:17:37.547Z",
+      "changeTime": "2019-05-05T05:55:48.846Z",
+      "birthTime": "2019-05-05T05:55:48.846Z",
       "root": "/",
       "dir": "/home/hameet/New/crypto-prices/src/images",
       "base": "gatsby-icon.png",
@@ -1025,16 +1069,16 @@
       "gid": 1000,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 1595353,
+      "ino": 1558171,
       "blocks": 48,
-      "atimeMs": 1556588963356.4722,
-      "mtimeMs": 1555224845485.097,
-      "ctimeMs": 1555554280714.2131,
-      "birthtimeMs": 1555554280714.2131,
-      "atime": "2019-04-30T01:49:23.356Z",
-      "mtime": "2019-04-14T06:54:05.485Z",
-      "ctime": "2019-04-18T02:24:40.714Z",
-      "birthtime": "2019-04-18T02:24:40.714Z"
+      "atimeMs": 1557645457547.147,
+      "mtimeMs": 1557035748846.381,
+      "ctimeMs": 1557035748846.381,
+      "birthtimeMs": 1557035748846.381,
+      "atime": "2019-05-12T07:17:37.547Z",
+      "mtime": "2019-05-05T05:55:48.846Z",
+      "ctime": "2019-05-05T05:55:48.846Z",
+      "birthtime": "2019-05-05T05:55:48.846Z"
     },
     "7af1d8b6-427a-5d94-b4d3-0e771cc32287": {
       "id": "7af1d8b6-427a-5d94-b4d3-0e771cc32287",
@@ -1045,98 +1089,6 @@
         "type": "ImageSharp",
         "owner": "gatsby-transformer-sharp"
       }
-    },
-    "2b4e116a-9efd-543c-a6da-077cea78aa60": {
-      "id": "2b4e116a-9efd-543c-a6da-077cea78aa60",
-      "children": [],
-      "parent": null,
-      "internal": {
-        "contentDigest": "391018e096fcc264629d14b9f4fd0fed",
-        "type": "File",
-        "mediaType": "image/gif",
-        "description": "File \"src/images/pig.gif\"",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "images",
-      "absolutePath": "/home/hameet/New/crypto-prices/src/images/pig.gif",
-      "relativePath": "pig.gif",
-      "extension": "gif",
-      "size": 126750,
-      "prettySize": "127 kB",
-      "modifiedTime": "2019-04-23T03:43:43.933Z",
-      "accessTime": "2019-04-30T01:49:23.404Z",
-      "changeTime": "2019-04-23T03:44:25.847Z",
-      "birthTime": "2019-04-23T03:44:25.847Z",
-      "root": "/",
-      "dir": "/home/hameet/New/crypto-prices/src/images",
-      "base": "pig.gif",
-      "ext": ".gif",
-      "name": "pig",
-      "relativeDirectory": "",
-      "dev": 2068,
-      "mode": 33204,
-      "nlink": 1,
-      "uid": 1000,
-      "gid": 1000,
-      "rdev": 0,
-      "blksize": 4096,
-      "ino": 2620577,
-      "blocks": 256,
-      "atimeMs": 1556588963404.4763,
-      "mtimeMs": 1555991023933.0684,
-      "ctimeMs": 1555991065847.1624,
-      "birthtimeMs": 1555991065847.1624,
-      "atime": "2019-04-30T01:49:23.404Z",
-      "mtime": "2019-04-23T03:43:43.933Z",
-      "ctime": "2019-04-23T03:44:25.847Z",
-      "birthtime": "2019-04-23T03:44:25.847Z"
-    },
-    "97015446-c629-510b-9681-f791c072d1c2": {
-      "id": "97015446-c629-510b-9681-f791c072d1c2",
-      "children": [
-        "34466678-c835-5211-b9e3-51c6107eefb4"
-      ],
-      "parent": null,
-      "internal": {
-        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
-        "type": "File",
-        "mediaType": "image/jpeg",
-        "description": "File \"src/images/pig.jpeg\"",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "images",
-      "absolutePath": "/home/hameet/New/crypto-prices/src/images/pig.jpeg",
-      "relativePath": "pig.jpeg",
-      "extension": "jpeg",
-      "size": 75459,
-      "prettySize": "75.5 kB",
-      "modifiedTime": "2019-04-17T01:43:59.340Z",
-      "accessTime": "2019-04-30T01:49:23.368Z",
-      "changeTime": "2019-04-18T02:24:40.714Z",
-      "birthTime": "2019-04-18T02:24:40.714Z",
-      "root": "/",
-      "dir": "/home/hameet/New/crypto-prices/src/images",
-      "base": "pig.jpeg",
-      "ext": ".jpeg",
-      "name": "pig",
-      "relativeDirectory": "",
-      "dev": 2068,
-      "mode": 33204,
-      "nlink": 1,
-      "uid": 1000,
-      "gid": 1000,
-      "rdev": 0,
-      "blksize": 4096,
-      "ino": 1595351,
-      "blocks": 160,
-      "atimeMs": 1556588963368.4731,
-      "mtimeMs": 1555465439340,
-      "ctimeMs": 1555554280714.2131,
-      "birthtimeMs": 1555554280714.2131,
-      "atime": "2019-04-30T01:49:23.368Z",
-      "mtime": "2019-04-17T01:43:59.340Z",
-      "ctime": "2019-04-18T02:24:40.714Z",
-      "birthtime": "2019-04-18T02:24:40.714Z"
     },
     "1f671196-df5b-5d49-9aa1-a139438be754": {
       "id": "1f671196-df5b-5d49-9aa1-a139438be754",
@@ -1157,10 +1109,10 @@
       "extension": "png",
       "size": 167273,
       "prettySize": "167 kB",
-      "modifiedTime": "2019-04-14T06:54:05.485Z",
-      "accessTime": "2019-04-30T01:49:23.364Z",
-      "changeTime": "2019-04-18T02:24:40.714Z",
-      "birthTime": "2019-04-18T02:24:40.714Z",
+      "modifiedTime": "2019-05-05T05:55:48.846Z",
+      "accessTime": "2019-05-12T07:17:37.547Z",
+      "changeTime": "2019-05-05T05:55:48.846Z",
+      "birthTime": "2019-05-05T05:55:48.846Z",
       "root": "/",
       "dir": "/home/hameet/New/crypto-prices/src/images",
       "base": "gatsby-astronaut.png",
@@ -1174,26 +1126,16 @@
       "gid": 1000,
       "rdev": 0,
       "blksize": 4096,
-      "ino": 1595352,
+      "ino": 1558170,
       "blocks": 328,
-      "atimeMs": 1556588963364.473,
-      "mtimeMs": 1555224845485.097,
-      "ctimeMs": 1555554280714.2131,
-      "birthtimeMs": 1555554280714.2131,
-      "atime": "2019-04-30T01:49:23.364Z",
-      "mtime": "2019-04-14T06:54:05.485Z",
-      "ctime": "2019-04-18T02:24:40.714Z",
-      "birthtime": "2019-04-18T02:24:40.714Z"
-    },
-    "34466678-c835-5211-b9e3-51c6107eefb4": {
-      "id": "34466678-c835-5211-b9e3-51c6107eefb4",
-      "children": [],
-      "parent": "97015446-c629-510b-9681-f791c072d1c2",
-      "internal": {
-        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
-        "type": "ImageSharp",
-        "owner": "gatsby-transformer-sharp"
-      }
+      "atimeMs": 1557645457547.147,
+      "mtimeMs": 1557035748846.381,
+      "ctimeMs": 1557035748846.381,
+      "birthtimeMs": 1557035748846.381,
+      "atime": "2019-05-12T07:17:37.547Z",
+      "mtime": "2019-05-05T05:55:48.846Z",
+      "ctime": "2019-05-05T05:55:48.846Z",
+      "birthtime": "2019-05-05T05:55:48.846Z"
     },
     "b5ccd4ab-557c-5d9a-bb92-4b201e78ed76": {
       "id": "b5ccd4ab-557c-5d9a-bb92-4b201e78ed76",
@@ -1201,6 +1143,108 @@
       "parent": "1f671196-df5b-5d49-9aa1-a139438be754",
       "internal": {
         "contentDigest": "6d91c86c0fde632ba4cd01062fd9ccfa",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
+      }
+    },
+    "97015446-c629-510b-9681-f791c072d1c2": {
+      "id": "97015446-c629-510b-9681-f791c072d1c2",
+      "children": [
+        "34466678-c835-5211-b9e3-51c6107eefb4"
+      ],
+      "parent": null,
+      "internal": {
+        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"src/images/pig.jpeg\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "/home/hameet/New/crypto-prices/src/images/pig.jpeg",
+      "relativePath": "pig.jpeg",
+      "extension": "jpeg",
+      "size": 75459,
+      "prettySize": "75.5 kB",
+      "modifiedTime": "2019-05-05T05:55:48.850Z",
+      "accessTime": "2019-05-12T07:17:37.547Z",
+      "changeTime": "2019-05-05T05:55:48.850Z",
+      "birthTime": "2019-05-05T05:55:48.850Z",
+      "root": "/",
+      "dir": "/home/hameet/New/crypto-prices/src/images",
+      "base": "pig.jpeg",
+      "ext": ".jpeg",
+      "name": "pig",
+      "relativeDirectory": "",
+      "dev": 2068,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 1558173,
+      "blocks": 152,
+      "atimeMs": 1557645457547.147,
+      "mtimeMs": 1557035748850.381,
+      "ctimeMs": 1557035748850.381,
+      "birthtimeMs": 1557035748850.381,
+      "atime": "2019-05-12T07:17:37.547Z",
+      "mtime": "2019-05-05T05:55:48.850Z",
+      "ctime": "2019-05-05T05:55:48.850Z",
+      "birthtime": "2019-05-05T05:55:48.850Z"
+    },
+    "2b4e116a-9efd-543c-a6da-077cea78aa60": {
+      "id": "2b4e116a-9efd-543c-a6da-077cea78aa60",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "391018e096fcc264629d14b9f4fd0fed",
+        "type": "File",
+        "mediaType": "image/gif",
+        "description": "File \"src/images/pig.gif\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "/home/hameet/New/crypto-prices/src/images/pig.gif",
+      "relativePath": "pig.gif",
+      "extension": "gif",
+      "size": 126750,
+      "prettySize": "127 kB",
+      "modifiedTime": "2019-05-05T05:55:48.850Z",
+      "accessTime": "2019-05-12T07:17:37.547Z",
+      "changeTime": "2019-05-05T05:55:48.850Z",
+      "birthTime": "2019-05-05T05:55:48.850Z",
+      "root": "/",
+      "dir": "/home/hameet/New/crypto-prices/src/images",
+      "base": "pig.gif",
+      "ext": ".gif",
+      "name": "pig",
+      "relativeDirectory": "",
+      "dev": 2068,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 1558172,
+      "blocks": 248,
+      "atimeMs": 1557645457547.147,
+      "mtimeMs": 1557035748850.381,
+      "ctimeMs": 1557035748850.381,
+      "birthtimeMs": 1557035748850.381,
+      "atime": "2019-05-12T07:17:37.547Z",
+      "mtime": "2019-05-05T05:55:48.850Z",
+      "ctime": "2019-05-05T05:55:48.850Z",
+      "birthtime": "2019-05-05T05:55:48.850Z"
+    },
+    "34466678-c835-5211-b9e3-51c6107eefb4": {
+      "id": "34466678-c835-5211-b9e3-51c6107eefb4",
+      "children": [],
+      "parent": "97015446-c629-510b-9681-f791c072d1c2",
+      "internal": {
+        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
         "type": "ImageSharp",
         "owner": "gatsby-transformer-sharp"
       }
@@ -1292,7 +1336,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "e4271a41d5d0333fe1552dd7eff1fb31"
+    "PLUGINS_HASH": "f239531676d5122dc756162d73cd250b"
   },
   "componentDataDependencies": {
     "nodes": {
@@ -1326,7 +1370,7 @@
       "pages": [
         "/dev-404-page/"
       ],
-      "isInBootstrap": true
+      "isInBootstrap": false
     },
     "/home/hameet/New/crypto-prices/src/pages/404.js": {
       "componentPath": "/home/hameet/New/crypto-prices/src/pages/404.js",
@@ -1335,7 +1379,7 @@
         "/404/",
         "/404.html"
       ],
-      "isInBootstrap": true
+      "isInBootstrap": false
     },
     "/home/hameet/New/crypto-prices/src/pages/index.js": {
       "componentPath": "/home/hameet/New/crypto-prices/src/pages/index.js",
@@ -1343,7 +1387,7 @@
       "pages": [
         "/"
       ],
-      "isInBootstrap": true
+      "isInBootstrap": false
     },
     "/home/hameet/New/crypto-prices/src/pages/page-2.js": {
       "componentPath": "/home/hameet/New/crypto-prices/src/pages/page-2.js",
@@ -1351,7 +1395,7 @@
       "pages": [
         "/page-2/"
       ],
-      "isInBootstrap": true
+      "isInBootstrap": false
     }
   },
   "staticQueryComponents": {

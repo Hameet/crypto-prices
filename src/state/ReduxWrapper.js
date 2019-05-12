@@ -5,6 +5,7 @@ import rootReducer from './reducer'
 import { GlobalStyle } from '../Components/styled/Global'
 
 const createStore = () => reduxCreateStore(rootReducer)
+
 export default ({ element }) => (
   <>
     <GlobalStyle />

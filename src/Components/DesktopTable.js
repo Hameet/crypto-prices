@@ -1,6 +1,7 @@
 import React from 'react'
 import { map } from 'ramda'
 import { uid } from 'react-uid'
+import { Lines } from 'react-preloading-component'
 
 import {
   StyledTable,
@@ -23,7 +24,9 @@ import {
 } from '../utilities'
 
 const DesktopTable = ({ rates }) => {
-  return (
+  return rates.length == 2 ? (
+    <Lines />
+  ) : rates.length == 100 ? (
     <StyledTable>
       <StyledHead>
         <HeadRow>
@@ -72,7 +75,7 @@ const DesktopTable = ({ rates }) => {
         }, rates)}
       </StyledBody>
     </StyledTable>
-  )
+  ) : null
 }
 
 export default DesktopTable

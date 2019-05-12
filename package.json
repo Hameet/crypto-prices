@@ -23,6 +23,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-preloading-component": "^0.0.5",
     "react-redux": "^7.0.2",
     "react-responsive": "^6.1.1",
     "react-test-renderer": "^16.8.6",
@@ -31,7 +32,30 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest-enzyme": "^7.0.2",
+    "prettier": "^1.17.0",
+    "redux-mock-store": "^1.5.3"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/components/index.js",
+      "!src/components/styled/index.js",
+      "!src/constants.js",
+      "!src/containers/index.js",
+      "!src/index.js",
+      "!src/registerServiceWorker.js",
+      "!src/state/constants.js",
+      "!src/state/index.js",
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/setUpTest.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "keywords": [
     "gatsby"
