@@ -12,7 +12,8 @@ const Wrapper = styled.div`
   width: 100%;
   text-align: center;
   padding-top: 70px;
-  padding-bottom: 15px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
 `
 const transition = keyframes`
 from {

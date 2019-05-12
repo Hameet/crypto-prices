@@ -1,7 +1,7 @@
 import React from 'react'
 import { map } from 'ramda'
 import { uid } from 'react-uid'
-import { Lines } from 'react-preloading-component'
+import { Eye } from 'react-preloading-component'
 
 import {
   StyledTable,
@@ -20,7 +20,7 @@ import { RoundOffPrice, isPositive, RoundOffBig } from '../utilities'
 
 const MobileTable = ({ rates }) => {
   return rates.length == 2 ? (
-    <Lines />
+    <Eye />
   ) : rates.length == 100 ? (
     <StyledTable>
       <StyledHead>
