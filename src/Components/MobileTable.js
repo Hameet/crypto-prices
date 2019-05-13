@@ -19,9 +19,10 @@ import { StyledBubble, Box2 } from './styled/styled-wrappers'
 import { RoundOffPrice, isPositive, RoundOffBig } from '../utilities'
 
 const MobileTable = ({ rates }) => {
-  return rates.length === 2 ? (
-    <Eye />
-  ) : rates.length === 100 ? (
+  // rates.length === 2 ? (
+  //   <Eye />
+  // ) : rates.length === 100 ?
+  return (
     <StyledTable>
       <StyledHead>
         <HeadRow>
@@ -51,7 +52,7 @@ const MobileTable = ({ rates }) => {
         }, rates)}
       </StyledBody>
     </StyledTable>
-  ) : null
+  )
 }
 
 export default MobileTable

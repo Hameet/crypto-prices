@@ -979,12 +979,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-05-13T00:44:08.638Z",
+      "buildTime": "2019-05-13T02:42:56.807Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "55214fb5c47106df995ca6cebd540aa3",
+        "contentDigest": "f235e9d696561adaff30015968e8f9fe",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
