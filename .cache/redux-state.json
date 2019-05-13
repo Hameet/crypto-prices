@@ -803,10 +803,6 @@
             "version": "^5.2.0"
           },
           {
-            "name": "react-preloading-component",
-            "version": "^0.0.5"
-          },
-          {
             "name": "react-redux",
             "version": "^7.0.2"
           },
@@ -979,12 +975,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-05-13T02:42:56.807Z",
+      "buildTime": "2019-05-13T02:55:30.734Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "f235e9d696561adaff30015968e8f9fe",
+        "contentDigest": "9df894ff0c92f04e64f43dca9df7e2d1",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1090,6 +1086,108 @@
         "owner": "gatsby-transformer-sharp"
       }
     },
+    "2b4e116a-9efd-543c-a6da-077cea78aa60": {
+      "id": "2b4e116a-9efd-543c-a6da-077cea78aa60",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "391018e096fcc264629d14b9f4fd0fed",
+        "type": "File",
+        "mediaType": "image/gif",
+        "description": "File \"src/images/pig.gif\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "/home/hameet/New/crypto-prices/src/images/pig.gif",
+      "relativePath": "pig.gif",
+      "extension": "gif",
+      "size": 126750,
+      "prettySize": "127 kB",
+      "modifiedTime": "2019-05-05T05:55:48.850Z",
+      "accessTime": "2019-05-12T07:17:37.547Z",
+      "changeTime": "2019-05-05T05:55:48.850Z",
+      "birthTime": "2019-05-05T05:55:48.850Z",
+      "root": "/",
+      "dir": "/home/hameet/New/crypto-prices/src/images",
+      "base": "pig.gif",
+      "ext": ".gif",
+      "name": "pig",
+      "relativeDirectory": "",
+      "dev": 2068,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 1558172,
+      "blocks": 248,
+      "atimeMs": 1557645457547.147,
+      "mtimeMs": 1557035748850.381,
+      "ctimeMs": 1557035748850.381,
+      "birthtimeMs": 1557035748850.381,
+      "atime": "2019-05-12T07:17:37.547Z",
+      "mtime": "2019-05-05T05:55:48.850Z",
+      "ctime": "2019-05-05T05:55:48.850Z",
+      "birthtime": "2019-05-05T05:55:48.850Z"
+    },
+    "97015446-c629-510b-9681-f791c072d1c2": {
+      "id": "97015446-c629-510b-9681-f791c072d1c2",
+      "children": [
+        "34466678-c835-5211-b9e3-51c6107eefb4"
+      ],
+      "parent": null,
+      "internal": {
+        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"src/images/pig.jpeg\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "/home/hameet/New/crypto-prices/src/images/pig.jpeg",
+      "relativePath": "pig.jpeg",
+      "extension": "jpeg",
+      "size": 75459,
+      "prettySize": "75.5 kB",
+      "modifiedTime": "2019-05-05T05:55:48.850Z",
+      "accessTime": "2019-05-12T07:17:37.547Z",
+      "changeTime": "2019-05-05T05:55:48.850Z",
+      "birthTime": "2019-05-05T05:55:48.850Z",
+      "root": "/",
+      "dir": "/home/hameet/New/crypto-prices/src/images",
+      "base": "pig.jpeg",
+      "ext": ".jpeg",
+      "name": "pig",
+      "relativeDirectory": "",
+      "dev": 2068,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 1558173,
+      "blocks": 152,
+      "atimeMs": 1557645457547.147,
+      "mtimeMs": 1557035748850.381,
+      "ctimeMs": 1557035748850.381,
+      "birthtimeMs": 1557035748850.381,
+      "atime": "2019-05-12T07:17:37.547Z",
+      "mtime": "2019-05-05T05:55:48.850Z",
+      "ctime": "2019-05-05T05:55:48.850Z",
+      "birthtime": "2019-05-05T05:55:48.850Z"
+    },
+    "34466678-c835-5211-b9e3-51c6107eefb4": {
+      "id": "34466678-c835-5211-b9e3-51c6107eefb4",
+      "children": [],
+      "parent": "97015446-c629-510b-9681-f791c072d1c2",
+      "internal": {
+        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
+        "type": "ImageSharp",
+        "owner": "gatsby-transformer-sharp"
+      }
+    },
     "1f671196-df5b-5d49-9aa1-a139438be754": {
       "id": "1f671196-df5b-5d49-9aa1-a139438be754",
       "children": [
@@ -1143,108 +1241,6 @@
       "parent": "1f671196-df5b-5d49-9aa1-a139438be754",
       "internal": {
         "contentDigest": "6d91c86c0fde632ba4cd01062fd9ccfa",
-        "type": "ImageSharp",
-        "owner": "gatsby-transformer-sharp"
-      }
-    },
-    "97015446-c629-510b-9681-f791c072d1c2": {
-      "id": "97015446-c629-510b-9681-f791c072d1c2",
-      "children": [
-        "34466678-c835-5211-b9e3-51c6107eefb4"
-      ],
-      "parent": null,
-      "internal": {
-        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
-        "type": "File",
-        "mediaType": "image/jpeg",
-        "description": "File \"src/images/pig.jpeg\"",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "images",
-      "absolutePath": "/home/hameet/New/crypto-prices/src/images/pig.jpeg",
-      "relativePath": "pig.jpeg",
-      "extension": "jpeg",
-      "size": 75459,
-      "prettySize": "75.5 kB",
-      "modifiedTime": "2019-05-05T05:55:48.850Z",
-      "accessTime": "2019-05-12T07:17:37.547Z",
-      "changeTime": "2019-05-05T05:55:48.850Z",
-      "birthTime": "2019-05-05T05:55:48.850Z",
-      "root": "/",
-      "dir": "/home/hameet/New/crypto-prices/src/images",
-      "base": "pig.jpeg",
-      "ext": ".jpeg",
-      "name": "pig",
-      "relativeDirectory": "",
-      "dev": 2068,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 1000,
-      "gid": 1000,
-      "rdev": 0,
-      "blksize": 4096,
-      "ino": 1558173,
-      "blocks": 152,
-      "atimeMs": 1557645457547.147,
-      "mtimeMs": 1557035748850.381,
-      "ctimeMs": 1557035748850.381,
-      "birthtimeMs": 1557035748850.381,
-      "atime": "2019-05-12T07:17:37.547Z",
-      "mtime": "2019-05-05T05:55:48.850Z",
-      "ctime": "2019-05-05T05:55:48.850Z",
-      "birthtime": "2019-05-05T05:55:48.850Z"
-    },
-    "2b4e116a-9efd-543c-a6da-077cea78aa60": {
-      "id": "2b4e116a-9efd-543c-a6da-077cea78aa60",
-      "children": [],
-      "parent": null,
-      "internal": {
-        "contentDigest": "391018e096fcc264629d14b9f4fd0fed",
-        "type": "File",
-        "mediaType": "image/gif",
-        "description": "File \"src/images/pig.gif\"",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "images",
-      "absolutePath": "/home/hameet/New/crypto-prices/src/images/pig.gif",
-      "relativePath": "pig.gif",
-      "extension": "gif",
-      "size": 126750,
-      "prettySize": "127 kB",
-      "modifiedTime": "2019-05-05T05:55:48.850Z",
-      "accessTime": "2019-05-12T07:17:37.547Z",
-      "changeTime": "2019-05-05T05:55:48.850Z",
-      "birthTime": "2019-05-05T05:55:48.850Z",
-      "root": "/",
-      "dir": "/home/hameet/New/crypto-prices/src/images",
-      "base": "pig.gif",
-      "ext": ".gif",
-      "name": "pig",
-      "relativeDirectory": "",
-      "dev": 2068,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 1000,
-      "gid": 1000,
-      "rdev": 0,
-      "blksize": 4096,
-      "ino": 1558172,
-      "blocks": 248,
-      "atimeMs": 1557645457547.147,
-      "mtimeMs": 1557035748850.381,
-      "ctimeMs": 1557035748850.381,
-      "birthtimeMs": 1557035748850.381,
-      "atime": "2019-05-12T07:17:37.547Z",
-      "mtime": "2019-05-05T05:55:48.850Z",
-      "ctime": "2019-05-05T05:55:48.850Z",
-      "birthtime": "2019-05-05T05:55:48.850Z"
-    },
-    "34466678-c835-5211-b9e3-51c6107eefb4": {
-      "id": "34466678-c835-5211-b9e3-51c6107eefb4",
-      "children": [],
-      "parent": "97015446-c629-510b-9681-f791c072d1c2",
-      "internal": {
-        "contentDigest": "fe833569d2c8f701f8178dc8256c64ee",
         "type": "ImageSharp",
         "owner": "gatsby-transformer-sharp"
       }
@@ -1336,7 +1332,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "f239531676d5122dc756162d73cd250b"
+    "PLUGINS_HASH": "fb6c985b9533b8e1025ff7d1bb599b44"
   },
   "componentDataDependencies": {
     "nodes": {

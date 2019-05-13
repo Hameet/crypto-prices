@@ -1,7 +1,7 @@
 import React from 'react'
 import { map } from 'ramda'
 import { uid } from 'react-uid'
-import { Eye } from 'react-preloading-component'
+// import Eye from './styled/Eye/Eye'
 
 import {
   StyledTable,
@@ -19,10 +19,9 @@ import { StyledBubble, Box2 } from './styled/styled-wrappers'
 import { RoundOffPrice, isPositive, RoundOffBig } from '../utilities'
 
 const MobileTable = ({ rates }) => {
-  // rates.length === 2 ? (
-  //   <Eye />
-  // ) : rates.length === 100 ?
   return (
+  // <div> <Eye> </Eye></div>
+
     <StyledTable>
       <StyledHead>
         <HeadRow>
