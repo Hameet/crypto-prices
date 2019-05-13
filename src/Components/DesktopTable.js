@@ -24,9 +24,9 @@ import {
 } from '../utilities'
 
 const DesktopTable = ({ rates }) => {
-  return rates.length == 2 ? (
+  return rates.length === 2 ? (
     <Lines />
-  ) : rates.length == 100 ? (
+  ) : rates.length === 100 ? (
     <StyledTable>
       <StyledHead>
         <HeadRow>

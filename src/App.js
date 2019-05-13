@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Lines } from 'react-preloading-component'
 
 import DesktopTable from './containers/DesktopTable'
 import MobileTable from './containers/MobileTable'
