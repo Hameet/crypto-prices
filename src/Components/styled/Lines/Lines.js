@@ -5,7 +5,7 @@ import './lines.css'
 export default class Lines extends Component {
   static defaultProps = {
     color: '#FF4601',
-    size: 30
+    size: 100
   }
 
   static propTypes = {

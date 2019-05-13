@@ -975,12 +975,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-05-13T03:07:44.555Z",
+      "buildTime": "2019-05-13T03:18:16.416Z",
       "id": "Site",
       "parent": null,
       "children": [],
       "internal": {
-        "contentDigest": "2732767769a7c04854c0450253ed5827",
+        "contentDigest": "a0cdf8bdd3fce1b597d2963f03c7e9a2",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1366,7 +1366,7 @@
       "pages": [
         "/dev-404-page/"
       ],
-      "isInBootstrap": false
+      "isInBootstrap": true
     },
     "/home/hameet/New/crypto-prices/src/pages/404.js": {
       "componentPath": "/home/hameet/New/crypto-prices/src/pages/404.js",
@@ -1375,7 +1375,7 @@
         "/404/",
         "/404.html"
       ],
-      "isInBootstrap": false
+      "isInBootstrap": true
     },
     "/home/hameet/New/crypto-prices/src/pages/index.js": {
       "componentPath": "/home/hameet/New/crypto-prices/src/pages/index.js",
@@ -1383,7 +1383,7 @@
       "pages": [
         "/"
       ],
-      "isInBootstrap": false
+      "isInBootstrap": true
     },
     "/home/hameet/New/crypto-prices/src/pages/page-2.js": {
       "componentPath": "/home/hameet/New/crypto-prices/src/pages/page-2.js",
@@ -1391,7 +1391,7 @@
       "pages": [
         "/page-2/"
       ],
-      "isInBootstrap": false
+      "isInBootstrap": true
     }
   },
   "staticQueryComponents": {
