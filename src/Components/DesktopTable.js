@@ -51,7 +51,7 @@ const DesktopTable = ({ rates }) => {
           const Volume24h = VolumeConvert(x['24h_volume_usd'])
           const MarketCap = VolumeConvert(x.market_cap_usd)
           const AvailableSupply = ConvertSupply(x.available_supply)
-          const Num = uid(x).replace(/\D/g, '') - 2
+          const Num = uid(x).replace(/\D/g, '') 
 
           return (
             <BodyRow key={uid(x)}>
