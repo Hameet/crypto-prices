@@ -16,7 +16,12 @@ import {
 
 import { StyledBubble, Box2 } from './styled/styled-wrappers'
 
-import { RoundOffPrice, isPositive, RoundOffBig } from '../utilities'
+import {
+  RoundOffPrice,
+  isPositive,
+  RoundOffBig,
+  RoundOffPercentage
+} from '../utilities'
 
 const MobileTable = ({ rates }) => {
   return rates.length === 2 ? (
@@ -43,7 +48,9 @@ const MobileTable = ({ rates }) => {
               <StyledName>{x.symbol}</StyledName>{' '}
               <StyledText>{'$' + UsdPrice}</StyledText>
               <StyledBubble>
-                <Box2 varied24={varied24}>{x.percent_change_24h + '%'}</Box2>
+                <Box2 varied24={varied24}>
+                  {RoundOffPercentage(x.percent_change_24h) + '%'}
+                </Box2>
               </StyledBubble>
               <StyledText>{'$' + MarketCap}</StyledText>
             </BodyRow>

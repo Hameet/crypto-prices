@@ -18,12 +18,13 @@ import { StyledBubble, Box, Box2, Box3 } from './styled/styled-wrappers'
 
 import {
   RoundOffPrice,
-  VolumeConvert,
+  RoundOffPercentage,
   ConvertSupply,
   isPositive
 } from '../utilities'
 
 const DesktopTable = ({ rates }) => {
+  console.log('reates', rates)
   return rates.length === 2 ? (
     <Lines />
   ) : rates.length === 100 ? (
@@ -48,11 +49,11 @@ const DesktopTable = ({ rates }) => {
           const varied24 = isPositive(x.percent_change_24h)
           const varied7d = isPositive(x.percent_change_7d)
           const UsdPrice = RoundOffPrice(x.price_usd)
-          const Volume24h = VolumeConvert(x['24h_volume_usd'])
-          const MarketCap = VolumeConvert(x.market_cap_usd)
+          const Volume24h = x['24h_volume_usd']
+          const MarketCap = x.market_cap_usd
           const AvailableSupply = ConvertSupply(x.available_supply)
-          const Num = uid(x).replace(/\D/g, '') 
-
+          const Num = uid(x).replace(/\D/g, '')
+          console.log('varied', varied24)
           return (
             <BodyRow key={uid(x)}>
               <StyledText>{Num}</StyledText>
@@ -60,13 +61,19 @@ const DesktopTable = ({ rates }) => {
               <StyledText>{'$' + UsdPrice}</StyledText>
               <StyledText>{'$' + Volume24h}</StyledText>
               <StyledBubble>
-                <Box varied={varied}>{x.percent_change_1h + '%'}</Box>
+                <Box varied={varied}>
+                  {RoundOffPercentage(x.percent_change_1h) + '%'}
+                </Box>
               </StyledBubble>
               <StyledBubble>
-                <Box2 varied24={varied24}>{x.percent_change_24h + '%'}</Box2>
+                <Box2 varied24={varied24}>
+                  {RoundOffPercentage(x.percent_change_24h) + '%'}
+                </Box2>
               </StyledBubble>
               <StyledBubble>
-                <Box3 varied7d={varied7d}>{x.percent_change_7d + '%'}</Box3>
+                <Box3 varied7d={varied7d}>
+                  {RoundOffPercentage(x.percent_change_7d) + '%'}
+                </Box3>
               </StyledBubble>
               <StyledText>{'$' + MarketCap}</StyledText>
               <StyledText>{AvailableSupply}</StyledText>
